@@ -1,0 +1,45 @@
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Base\bin\Debug\FDI.Base.dll.config
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Base\bin\Debug\FDI.Base.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Base\bin\Debug\FDI.Base.pdb
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Base\obj\Debug\FDI.Base.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Base\obj\Debug\FDI.Base.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Base\obj\Debug\FDI.Base.dll
+D:\PROJECTS\fdiv4\Code\FDI.Base\obj\Debug\FDI.Base.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Base\bin\Debug\FDI.Base.dll.config
+D:\PROJECTS\fdiv4\Code\FDI.Base\bin\Debug\FDI.Base.dll
+D:\PROJECTS\fdiv4\Code\FDI.Base\bin\Debug\FDI.Base.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Base\bin\Debug\EntityFramework.dll
+D:\PROJECTS\fdiv4\Code\FDI.Base\bin\Debug\EntityFramework.xml
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Base\obj\Debug\FDI.Base.csprojResolveAssemblyReference.cache
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Base.dll.config
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Base.dll
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Base.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Base\obj\Debug\FDI.Base.csprojResolveAssemblyReference.cache
+E:\Test\Website4\Code\FDI.Web\bin\FDI.Base.dll.config
+E:\Test\Website4\Code\FDI.Web\bin\FDI.Base.dll
+E:\Test\Website4\Code\FDI.Web\bin\FDI.Base.pdb
+E:\Test\Website4\Code\FDI.Base\obj\Debug\FDI.Base.csprojResolveAssemblyReference.cache
+E:\Test\Website4\Code\FDI.Base\obj\Debug\FDI.Base.dll
+E:\Test\Website4\Code\FDI.Base\obj\Debug\FDI.Base.pdb
+D:\FdiSoft\Project\Code\CTS.Web\bin\FDI.Base.dll.config
+D:\FdiSoft\Project\Code\CTS.Web\bin\FDI.Base.dll
+D:\FdiSoft\Project\Code\CTS.Web\bin\FDI.Base.pdb
+D:\FdiSoft\Project\Code\CTS.Base\obj\Debug\FDI.Base.csprojResolveAssemblyReference.cache
+D:\FdiSoft\Project\Code\CTS.Base\obj\Debug\FDI.Base.dll
+D:\FdiSoft\Project\Code\CTS.Base\obj\Debug\FDI.Base.pdb
+D:\FdiSoft\Project\Code\FDI.Base\obj\Debug\FDI.Base.csprojResolveAssemblyReference.cache
+D:\FdiSoft\Project\Code\FDI.Base\obj\Debug\FDI.Base.dll
+D:\FdiSoft\Project\Code\FDI.Base\obj\Debug\FDI.Base.pdb
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.Base.dll.config
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.Base.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.Base.pdb
+D:\FdiSoft\FDI\Code\FDI.Web\bin\FDI.Base.dll.config
+D:\FdiSoft\FDI\Code\FDI.Web\bin\FDI.Base.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\FDI.Base.pdb
+D:\FdiSoft\FDI\Code\FDI.Base\obj\Debug\FDI.Base.dll
+D:\FdiSoft\FDI\Code\FDI.Base\obj\Debug\FDI.Base.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.Base.dll.config
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.Base.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.Base.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Base\obj\Debug\FDI.Base.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Base\obj\Debug\FDI.Base.pdb

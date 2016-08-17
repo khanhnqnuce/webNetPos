@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e8213f9fe20d48ff82f643e96ac5693d" Name="Diagram1" ZoomLevel="32">
+        <EntityTypeShape EntityType="FDIModel.Product" Width="1.5" PointX="3.2280410543214719" PointY="9.8134512052933918" />
+        <EntityTypeShape EntityType="FDIModel.ProductCategory" Width="1.5" PointX="2.1769767097090265" PointY="6.1958100675585728" />
+        <EntityTypeShape EntityType="FDIModel.Role" Width="1.5" PointX="2.3023335255227675" PointY="25.494659092973293" />
+        <EntityTypeShape EntityType="FDIModel.sysdiagram" Width="1.5" PointX="3.2231825959045359" PointY="14.690981216119129" />
+        <EntityTypeShape EntityType="FDIModel.tblArea" Width="1.5" PointX="1.6436945598775963" PointY="26.58093681679151" />
+        <EntityTypeShape EntityType="FDIModel.tblBlackList" Width="1.5" PointX="1.7352735967073931" PointY="31.379571377942138" />
+        <EntityTypeShape EntityType="FDIModel.tblBuiding" Width="1.5" PointX="5.7034573935454045" PointY="22.821696873205571" />
+        <EntityTypeShape EntityType="FDIModel.tblCard" Width="1.5" PointX="10.812343881843772" PointY="4.71364523689898" />
+        <EntityTypeShape EntityType="FDIModel.tblCardProcess" Width="1.5" PointX="2.7480767382067057" PointY="14.064932099573749" />
+        <EntityTypeShape EntityType="FDIModel.tblCardType" Width="1.5" PointX="7.8084844722452029" PointY="12.651344245603003" />
+        <EntityTypeShape EntityType="FDIModel.tblCustomer" Width="1.5" PointX="0.99447594256814376" PointY="15.983187861732761" />
+        <EntityTypeShape EntityType="FDIModel.tblCustomerClass" Width="1.5" PointX="5.841092540808531" PointY="9.1279405994005227" />
+        <EntityTypeShape EntityType="FDIModel.tblDBInfo" Width="1.5" PointX="1.7946339947146521" PointY="16.37450719642197" />
+        <EntityTypeShape EntityType="FDIModel.tblEvent" Width="1.5" PointX="2.2830499737910226" PointY="12.152069246467235" />
+        <EntityTypeShape EntityType="FDIModel.tblEventAlarm" Width="1.5" PointX="3.2717681579626019" PointY="28.310781775187134" />
+        <EntityTypeShape EntityType="FDIModel.tblEventCode" Width="1.5" PointX="1.4311773113120241" PointY="11.426028391079059" />
+        <EntityTypeShape EntityType="FDIModel.tblFunction" Width="1.5" PointX="9.3132975908523878" PointY="11.9672858919796" />
+        <EntityTypeShape EntityType="FDIModel.tblLine" Width="1.5" PointX="4.800255515053987" PointY="3.6566938625912617" />
+        <EntityTypeShape EntityType="FDIModel.tblLog" Width="1.5" PointX="8.2519385368805089" PointY="9.07310535436175" />
+        <EntityTypeShape EntityType="FDIModel.tblObject" Width="1.5" PointX="0.753334829934563" PointY="3.8446317780039423" />
+        <EntityTypeShape EntityType="FDIModel.tblPC" Width="1.5" PointX="9.8964760815242663" PointY="1.4171289510173393" />
+        <EntityTypeShape EntityType="FDIModel.tblRecord" Width="1.5" PointX="7.9660747404983621" PointY="17.77628336184485" />
+        <EntityTypeShape EntityType="FDIModel.tblSystemConfig" Width="1.5" PointX="4.218359807607885" PointY="5.9356344816906539" />
+        <EntityTypeShape EntityType="FDIModel.tblUser" Width="1.5" PointX="8.5667376297371174" PointY="22.677520002553948" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

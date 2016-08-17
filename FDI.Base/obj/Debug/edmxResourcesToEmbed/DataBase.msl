@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FDIModelStoreContainer" CdmEntityContainer="FDIEntities">
+    <FunctionImportMapping FunctionImportName="DeleteIssuedCard" FunctionName="FDIModel.Store.DeleteIssuedCard" />
+    <FunctionImportMapping FunctionImportName="InsertIntoCard" FunctionName="FDIModel.Store.InsertIntoCard" />
+    <FunctionImportMapping FunctionImportName="InsertIntoEvent" FunctionName="FDIModel.Store.InsertIntoEvent" />
+    <FunctionImportMapping FunctionImportName="InsertIntoRecord" FunctionName="FDIModel.Store.InsertIntoRecord" />
+    <FunctionImportMapping FunctionImportName="SelectFromRecord" FunctionName="FDIModel.Store.SelectFromRecord" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="FDIModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_BCTheoDoiTuong" FunctionName="FDIModel.Store.sp_BCTheoDoiTuong">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_BCTheoDoiTuong_Result">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="CountValue" ColumnName="CountValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_BCTheoKhuVuc" FunctionName="FDIModel.Store.sp_BCTheoKhuVuc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_BCTheoKhuVuc_Result">
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="CountValue" ColumnName="CountValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_capnhatsodu" FunctionName="FDIModel.Store.sp_capnhatsodu" />
+    <FunctionImportMapping FunctionImportName="sp_CardProcess" FunctionName="FDIModel.Store.sp_CardProcess">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_CardProcess_Result">
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="FDIModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="FDIModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_DTBanHang" FunctionName="FDIModel.Store.sp_DTBanHang">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_DTBanHang_Result">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DTBanHangTongHop" FunctionName="FDIModel.Store.sp_DTBanHangTongHop">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_DTBanHangTongHop_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DTBanThe" FunctionName="FDIModel.Store.sp_DTBanThe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_DTBanThe_Result">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DTBanTheTongHop" FunctionName="FDIModel.Store.sp_DTBanTheTongHop">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_DTBanTheTongHop_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_EventAlarm" FunctionName="FDIModel.Store.sp_EventAlarm">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_EventAlarm_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_findCard" FunctionName="FDIModel.Store.sp_findCard">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_findCard_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+          <ScalarProperty Name="IsRelease" ColumnName="IsRelease" />
+          <ScalarProperty Name="IsLockCard" ColumnName="IsLockCard" />
+          <ScalarProperty Name="IsEdit" ColumnName="IsEdit" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+          <ScalarProperty Name="NameType" ColumnName="NameType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetBackList" FunctionName="FDIModel.Store.sp_GetBackList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_GetBackList_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+          <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="CustomerClass" ColumnName="CustomerClass" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetCard" FunctionName="FDIModel.Store.sp_GetCard">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_GetCard_Result">
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="NameType" ColumnName="NameType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetListCard" FunctionName="FDIModel.Store.sp_GetListCard">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_GetListCard_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+          <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+          <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="CustomerClass" ColumnName="CustomerClass" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GiaoDichGanNhat" FunctionName="FDIModel.Store.sp_GiaoDichGanNhat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_GiaoDichGanNhat_Result">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="FDIModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="FDIModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LocCard" FunctionName="FDIModel.Store.sp_LocCard">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_LocCard_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+          <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Log" FunctionName="FDIModel.Store.sp_Log">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_Log_Result">
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Login" FunctionName="FDIModel.Store.sp_Login">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_Login_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Right1" ColumnName="Right1" />
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Record" FunctionName="FDIModel.Store.sp_Record">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_Record_Result">
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="Buiding" ColumnName="Buiding" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="FDIModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_TatCaGiaoDich" FunctionName="FDIModel.Store.sp_TatCaGiaoDich">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_TatCaGiaoDich_Result">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_TheTrungNhau" FunctionName="FDIModel.Store.sp_TheTrungNhau">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_TheTrungNhau_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+          <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+          <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="CustomerClass" ColumnName="CustomerClass" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ThongKeThe" FunctionName="FDIModel.Store.sp_ThongKeThe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_ThongKeThe_Result">
+          <ScalarProperty Name="NameType" ColumnName="NameType" />
+          <ScalarProperty Name="TotalNotUsed" ColumnName="TotalNotUsed" />
+          <ScalarProperty Name="TotalUsed" ColumnName="TotalUsed" />
+          <ScalarProperty Name="TotalBlock" ColumnName="TotalBlock" />
+          <ScalarProperty Name="TotalCard" ColumnName="TotalCard" />
+          <ScalarProperty Name="TotalBalance" ColumnName="TotalBalance" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ThongKeTheChiTiet" FunctionName="FDIModel.Store.sp_ThongKeTheChiTiet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FDIModel.sp_ThongKeTheChiTiet_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+          <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_UpdateCard" FunctionName="FDIModel.Store.sp_UpdateCard" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="FDIModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="FDIModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="Temp10" ColumnName="Temp10" />
+          <ScalarProperty Name="Temp9" ColumnName="Temp9" />
+          <ScalarProperty Name="Temp8" ColumnName="Temp8" />
+          <ScalarProperty Name="Temp7" ColumnName="Temp7" />
+          <ScalarProperty Name="Temp6" ColumnName="Temp6" />
+          <ScalarProperty Name="Temp5" ColumnName="Temp5" />
+          <ScalarProperty Name="Temp4" ColumnName="Temp4" />
+          <ScalarProperty Name="Temp3" ColumnName="Temp3" />
+          <ScalarProperty Name="Temp2" ColumnName="Temp2" />
+          <ScalarProperty Name="Temp1" ColumnName="Temp1" />
+          <ScalarProperty Name="IsInactive" ColumnName="IsInactive" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="ProductCategoryCode" ColumnName="ProductCategoryCode" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductCategories">
+      <EntityTypeMapping TypeName="FDIModel.ProductCategory">
+        <MappingFragment StoreEntitySet="ProductCategory">
+          <ScalarProperty Name="Temp5" ColumnName="Temp5" />
+          <ScalarProperty Name="Temp4" ColumnName="Temp4" />
+          <ScalarProperty Name="Temp3" ColumnName="Temp3" />
+          <ScalarProperty Name="Temp2" ColumnName="Temp2" />
+          <ScalarProperty Name="Temp1" ColumnName="Temp1" />
+          <ScalarProperty Name="IsInactive" ColumnName="IsInactive" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="FDIModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="FDIModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAreas">
+      <EntityTypeMapping TypeName="FDIModel.tblArea">
+        <MappingFragment StoreEntitySet="tblArea">
+          <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBlackLists">
+      <EntityTypeMapping TypeName="FDIModel.tblBlackList">
+        <MappingFragment StoreEntitySet="tblBlackList">
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="IsInActive" ColumnName="IsInActive" />
+          <ScalarProperty Name="ToObjects" ColumnName="ToObjects" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="MemoryID" ColumnName="MemoryID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBuidings">
+      <EntityTypeMapping TypeName="FDIModel.tblBuiding">
+        <MappingFragment StoreEntitySet="tblBuiding">
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCards">
+      <EntityTypeMapping TypeName="FDIModel.tblCard">
+        <MappingFragment StoreEntitySet="tblCard">
+          <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="IsEdit" ColumnName="IsEdit" />
+          <ScalarProperty Name="IsLockCard" ColumnName="IsLockCard" />
+          <ScalarProperty Name="IsRelease" ColumnName="IsRelease" />
+          <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCardProcesses">
+      <EntityTypeMapping TypeName="FDIModel.tblCardProcess">
+        <MappingFragment StoreEntitySet="tblCardProcess">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCardTypes">
+      <EntityTypeMapping TypeName="FDIModel.tblCardType">
+        <MappingFragment StoreEntitySet="tblCardType">
+          <ScalarProperty Name="Temp5" ColumnName="Temp5" />
+          <ScalarProperty Name="Temp4" ColumnName="Temp4" />
+          <ScalarProperty Name="Temp3" ColumnName="Temp3" />
+          <ScalarProperty Name="Temp2" ColumnName="Temp2" />
+          <ScalarProperty Name="Temp1" ColumnName="Temp1" />
+          <ScalarProperty Name="PointLevel" ColumnName="PointLevel" />
+          <ScalarProperty Name="IsMemberCard" ColumnName="IsMemberCard" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCustomers">
+      <EntityTypeMapping TypeName="FDIModel.tblCustomer">
+        <MappingFragment StoreEntitySet="tblCustomer">
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="CustomerClass" ColumnName="CustomerClass" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCustomerClasses">
+      <EntityTypeMapping TypeName="FDIModel.tblCustomerClass">
+        <MappingFragment StoreEntitySet="tblCustomerClass">
+          <ScalarProperty Name="CustomerClassName" ColumnName="CustomerClassName" />
+          <ScalarProperty Name="CustomerClass" ColumnName="CustomerClass" />
+          <ScalarProperty Name="CustomerClassID" ColumnName="CustomerClassID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDBInfoes">
+      <EntityTypeMapping TypeName="FDIModel.tblDBInfo">
+        <MappingFragment StoreEntitySet="tblDBInfo">
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="UpdateFile" ColumnName="UpdateFile" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEvents">
+      <EntityTypeMapping TypeName="FDIModel.tblEvent">
+        <MappingFragment StoreEntitySet="tblEvent">
+          <ScalarProperty Name="IsSync" ColumnName="IsSync" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="IsServer2" ColumnName="IsServer2" />
+          <ScalarProperty Name="IsServer1" ColumnName="IsServer1" />
+          <ScalarProperty Name="InOut" ColumnName="InOut" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+          <ScalarProperty Name="ObjectCode" ColumnName="ObjectCode" />
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="LineCode" ColumnName="LineCode" />
+          <ScalarProperty Name="PCCode" ColumnName="PCCode" />
+          <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="FID" ColumnName="FID" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEventAlarms">
+      <EntityTypeMapping TypeName="FDIModel.tblEventAlarm">
+        <MappingFragment StoreEntitySet="tblEventAlarm">
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEventCodes">
+      <EntityTypeMapping TypeName="FDIModel.tblEventCode">
+        <MappingFragment StoreEntitySet="tblEventCode">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFunctions">
+      <EntityTypeMapping TypeName="FDIModel.tblFunction">
+        <MappingFragment StoreEntitySet="tblFunction">
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="FID" ColumnName="FID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLines">
+      <EntityTypeMapping TypeName="FDIModel.tblLine">
+        <MappingFragment StoreEntitySet="tblLine">
+          <ScalarProperty Name="IsInActive" ColumnName="IsInActive" />
+          <ScalarProperty Name="LineTypeID" ColumnName="LineTypeID" />
+          <ScalarProperty Name="CommunicationType" ColumnName="CommunicationType" />
+          <ScalarProperty Name="BaudRate" ColumnName="BaudRate" />
+          <ScalarProperty Name="ComPort" ColumnName="ComPort" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PCCode" ColumnName="PCCode" />
+          <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLogs">
+      <EntityTypeMapping TypeName="FDIModel.tblLog">
+        <MappingFragment StoreEntitySet="tblLog">
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblObjects">
+      <EntityTypeMapping TypeName="FDIModel.tblObject">
+        <MappingFragment StoreEntitySet="tblObject">
+          <ScalarProperty Name="NetAddress" ColumnName="NetAddress" />
+          <ScalarProperty Name="IsPC" ColumnName="IsPC" />
+          <ScalarProperty Name="IsInActive" ColumnName="IsInActive" />
+          <ScalarProperty Name="ObjectTypeID" ColumnName="ObjectTypeID" />
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="NumEvent" ColumnName="NumEvent" />
+          <ScalarProperty Name="InOut" ColumnName="InOut" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="FID" ColumnName="FID" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="LineCode" ColumnName="LineCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPCs">
+      <EntityTypeMapping TypeName="FDIModel.tblPC">
+        <MappingFragment StoreEntitySet="tblPC">
+          <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRecords">
+      <EntityTypeMapping TypeName="FDIModel.tblRecord">
+        <MappingFragment StoreEntitySet="tblRecord">
+          <ScalarProperty Name="IsBankTransfer" ColumnName="IsBankTransfer" />
+          <ScalarProperty Name="IsSync" ColumnName="IsSync" />
+          <ScalarProperty Name="ReturnVal" ColumnName="ReturnVal" />
+          <ScalarProperty Name="CardDeposit" ColumnName="CardDeposit" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="IsServer2" ColumnName="IsServer2" />
+          <ScalarProperty Name="IsServer1" ColumnName="IsServer1" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+          <ScalarProperty Name="ObjectCode" ColumnName="ObjectCode" />
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="LineCode" ColumnName="LineCode" />
+          <ScalarProperty Name="PCCode" ColumnName="PCCode" />
+          <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="FID" ColumnName="FID" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSystemConfigs">
+      <EntityTypeMapping TypeName="FDIModel.tblSystemConfig">
+        <MappingFragment StoreEntitySet="tblSystemConfig">
+          <ScalarProperty Name="ReturnVal" ColumnName="ReturnVal" />
+          <ScalarProperty Name="Temp10" ColumnName="Temp10" />
+          <ScalarProperty Name="Temp9" ColumnName="Temp9" />
+          <ScalarProperty Name="Temp8" ColumnName="Temp8" />
+          <ScalarProperty Name="Temp7" ColumnName="Temp7" />
+          <ScalarProperty Name="Temp6" ColumnName="Temp6" />
+          <ScalarProperty Name="Temp5" ColumnName="Temp5" />
+          <ScalarProperty Name="Temp4" ColumnName="Temp4" />
+          <ScalarProperty Name="Temp3" ColumnName="Temp3" />
+          <ScalarProperty Name="Temp2" ColumnName="Temp2" />
+          <ScalarProperty Name="Temp1" ColumnName="Temp1" />
+          <ScalarProperty Name="IsCheckExistPC" ColumnName="IsCheckExistPC" />
+          <ScalarProperty Name="MinBalance" ColumnName="MinBalance" />
+          <ScalarProperty Name="MaxBalance" ColumnName="MaxBalance" />
+          <ScalarProperty Name="IsInsertNewCard" ColumnName="IsInsertNewCard" />
+          <ScalarProperty Name="IsAcceptNewCard" ColumnName="IsAcceptNewCard" />
+          <ScalarProperty Name="IsPointLevel" ColumnName="IsPointLevel" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="DepositForCard" ColumnName="DepositForCard" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="KeyB" ColumnName="KeyB" />
+          <ScalarProperty Name="KeyA" ColumnName="KeyA" />
+          <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="FDIModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="IsLockUser" ColumnName="IsLockUser" />
+          <ScalarProperty Name="Right1" ColumnName="Right1" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

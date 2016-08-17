@@ -1,0 +1,2068 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FDIModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="FDIModelStoreContainer">
+          <EntitySet Name="Product" EntityType="FDIModel.Store.Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductCategory" EntityType="FDIModel.Store.ProductCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Roles" EntityType="FDIModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="FDIModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblArea" EntityType="FDIModel.Store.tblArea" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblBlackList" EntityType="FDIModel.Store.tblBlackList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblBuiding" EntityType="FDIModel.Store.tblBuiding" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblCard" EntityType="FDIModel.Store.tblCard" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblCardProcess" EntityType="FDIModel.Store.tblCardProcess" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblCardType" EntityType="FDIModel.Store.tblCardType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblCustomer" EntityType="FDIModel.Store.tblCustomer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblCustomerClass" EntityType="FDIModel.Store.tblCustomerClass" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblDBInfo" EntityType="FDIModel.Store.tblDBInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblEvent" EntityType="FDIModel.Store.tblEvent" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblEventAlarm" EntityType="FDIModel.Store.tblEventAlarm" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblEventCode" EntityType="FDIModel.Store.tblEventCode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblFunction" EntityType="FDIModel.Store.tblFunction" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblLine" EntityType="FDIModel.Store.tblLine" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblLog" EntityType="FDIModel.Store.tblLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblObject" EntityType="FDIModel.Store.tblObject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblPC" EntityType="FDIModel.Store.tblPC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblRecord" EntityType="FDIModel.Store.tblRecord" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblSystemConfig" EntityType="FDIModel.Store.tblSystemConfig" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblUser" EntityType="FDIModel.Store.tblUser" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" MaxLength="5" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="10" />
+          <Property Name="UnitPrice" Type="int" />
+          <Property Name="ProductCategoryCode" Type="nvarchar" MaxLength="3" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsInactive" Type="bit" />
+          <Property Name="Temp1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp4" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp5" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp6" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp7" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp8" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp9" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp10" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsInactive" Type="bit" />
+          <Property Name="Temp1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp4" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp5" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserCode" Type="varchar" MaxLength="5" />
+          <Property Name="AreaCode" Type="varchar" MaxLength="5" />
+          <Property Name="BuidingCode" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="tblArea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" MaxLength="3" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+          <Property Name="BuidingCode" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tblBlackList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="MemoryID" Type="int" />
+          <Property Name="CardNumber" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ToObjects" Type="nvarchar" MaxLength="2048" />
+          <Property Name="IsInActive" Type="bit" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+          <Property Name="Balance" Type="decimal" />
+        </EntityType>
+        <EntityType Name="tblBuiding">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" MaxLength="2" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblCard">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="CardNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Balance" Type="decimal" Nullable="false" />
+          <Property Name="CardTypeCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="IsRelease" Type="bit" />
+          <Property Name="IsLockCard" Type="bit" />
+          <Property Name="IsEdit" Type="bit" Nullable="false" />
+          <Property Name="DateModified" Type="datetime" />
+          <Property Name="CardStatus" Type="nvarchar" MaxLength="3" />
+          <Property Name="OwnerCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateIssue" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblCardProcess">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="CardNumber" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Value" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblCardType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" MaxLength="2" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Discount" Type="tinyint" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsMemberCard" Type="bit" />
+          <Property Name="PointLevel" Type="int" />
+          <Property Name="Temp1" Type="nvarchar" MaxLength="1" />
+          <Property Name="Temp2" Type="nvarchar" MaxLength="1" />
+          <Property Name="Temp3" Type="nvarchar" MaxLength="1" />
+          <Property Name="Temp4" Type="nvarchar" MaxLength="1" />
+          <Property Name="Temp5" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="tblCustomer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerClass" Type="int" />
+          <Property Name="BirthDate" Type="datetime" />
+          <Property Name="SchoolYear" Type="nvarchar" MaxLength="50" />
+          <Property Name="PassWord" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="tblCustomerClass">
+          <Key>
+            <PropertyRef Name="CustomerClassID" />
+          </Key>
+          <Property Name="CustomerClassID" Type="int" Nullable="false" />
+          <Property Name="CustomerClass" Type="int" />
+          <Property Name="CustomerClassName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblDBInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Version" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateFile" Type="nvarchar" MaxLength="50" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblEvent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="CardNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="MID" Type="nvarchar" MaxLength="3" />
+          <Property Name="FID" Type="nvarchar" MaxLength="3" />
+          <Property Name="Value" Type="decimal" />
+          <Property Name="Balance" Type="int" />
+          <Property Name="Action" Type="nvarchar" MaxLength="3" />
+          <Property Name="EventCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="BuidingCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="PCCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="LineCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="AreaCode" Type="nvarchar" MaxLength="3" />
+          <Property Name="ObjectCode" Type="nvarchar" MaxLength="5" />
+          <Property Name="CardTypeCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="ShiftCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="UserCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="InOut" Type="tinyint" />
+          <Property Name="IsServer1" Type="bit" />
+          <Property Name="IsServer2" Type="bit" />
+          <Property Name="EventID" Type="varchar" MaxLength="10" />
+          <Property Name="ProductCode" Type="varchar" MaxLength="10" />
+          <Property Name="IsSync" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblEventAlarm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="BuidingCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="Object" Type="nvarchar" MaxLength="50" />
+          <Property Name="EventCode" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tblEventCode">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" MaxLength="2" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblFunction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FID" Type="nvarchar" MaxLength="3" />
+          <Property Name="Value" Type="int" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblLine">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" MaxLength="2" />
+          <Property Name="BuidingCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="PCCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+          <Property Name="ComPort" Type="nvarchar" MaxLength="50" />
+          <Property Name="BaudRate" Type="int" />
+          <Property Name="CommunicationType" Type="tinyint" />
+          <Property Name="LineTypeID" Type="int" />
+          <Property Name="IsInActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Datetime" Type="datetime" />
+          <Property Name="Object" Type="nvarchar" MaxLength="50" />
+          <Property Name="Message" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblObject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" MaxLength="5" />
+          <Property Name="LineCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="MID" Type="nvarchar" MaxLength="3" />
+          <Property Name="FID" Type="nvarchar" MaxLength="3" />
+          <Property Name="Value" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+          <Property Name="InOut" Type="tinyint" />
+          <Property Name="NumEvent" Type="tinyint" />
+          <Property Name="AreaCode" Type="nvarchar" MaxLength="3" />
+          <Property Name="ObjectTypeID" Type="int" />
+          <Property Name="IsInActive" Type="bit" />
+          <Property Name="IsPC" Type="bit" />
+          <Property Name="NetAddress" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblPC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" MaxLength="2" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+          <Property Name="IP" Type="nvarchar" MaxLength="50" />
+          <Property Name="BuidingCode" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tblRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="CardNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="MID" Type="nvarchar" MaxLength="3" />
+          <Property Name="FID" Type="nvarchar" MaxLength="3" />
+          <Property Name="Value" Type="decimal" />
+          <Property Name="Bonus" Type="int" />
+          <Property Name="Balance" Type="int" />
+          <Property Name="Action" Type="nvarchar" MaxLength="3" />
+          <Property Name="EventCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="BuidingCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="PCCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="LineCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="AreaCode" Type="nvarchar" MaxLength="3" />
+          <Property Name="ObjectCode" Type="nvarchar" MaxLength="5" />
+          <Property Name="CardTypeCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="ShiftCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="UserCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="IsServer1" Type="bit" />
+          <Property Name="IsServer2" Type="bit" />
+          <Property Name="EventID" Type="varchar" MaxLength="10" />
+          <Property Name="ProductCode" Type="varchar" MaxLength="10" />
+          <Property Name="CardDeposit" Type="int" />
+          <Property Name="ReturnVal" Type="int" />
+          <Property Name="IsSync" Type="bit" />
+          <Property Name="IsBankTransfer" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblSystemConfig">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="KeyA" Type="nvarchar" MaxLength="50" />
+          <Property Name="KeyB" Type="nvarchar" MaxLength="50" />
+          <Property Name="Discount" Type="int" />
+          <Property Name="DepositForCard" Type="int" />
+          <Property Name="Company" Type="nvarchar" MaxLength="150" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsPointLevel" Type="bit" />
+          <Property Name="IsAcceptNewCard" Type="bit" />
+          <Property Name="IsInsertNewCard" Type="bit" />
+          <Property Name="MaxBalance" Type="int" />
+          <Property Name="MinBalance" Type="int" />
+          <Property Name="IsCheckExistPC" Type="bit" />
+          <Property Name="Temp1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp4" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp5" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp6" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp7" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp8" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp9" Type="nvarchar" MaxLength="50" />
+          <Property Name="Temp10" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReturnVal" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" MaxLength="2" />
+          <Property Name="CardNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Right1" Type="tinyint" />
+          <Property Name="IsLockUser" Type="bit" Nullable="false" />
+        </EntityType>
+        <Function Name="DeleteIssuedCard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cardnumber" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="InsertIntoCard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Code" Type="nvarchar" Mode="In" />
+          <Parameter Name="CardNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="AccountName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Balance" Type="int" Mode="In" />
+          <Parameter Name="CardTypeCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsRelease" Type="bit" Mode="In" />
+          <Parameter Name="IsLockCard" Type="bit" Mode="In" />
+          <Parameter Name="IsEdit" Type="bit" Mode="In" />
+          <Parameter Name="DateModified" Type="datetime" Mode="In" />
+          <Parameter Name="CardStatus" Type="nvarchar" Mode="In" />
+          <Parameter Name="OwnerCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="DateIssue" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="InsertIntoEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Date" Type="datetime" Mode="In" />
+          <Parameter Name="CardNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="MID" Type="nvarchar" Mode="In" />
+          <Parameter Name="FID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="int" Mode="In" />
+          <Parameter Name="Balance" Type="int" Mode="In" />
+          <Parameter Name="Action" Type="nvarchar" Mode="In" />
+          <Parameter Name="EventCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="BuidingCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="PCCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="LineCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="AreaCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="ObjectCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="CardTypeCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="EventID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="InsertIntoRecord" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Date" Type="datetime" Mode="In" />
+          <Parameter Name="CardNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="MID" Type="nvarchar" Mode="In" />
+          <Parameter Name="FID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="int" Mode="In" />
+          <Parameter Name="Bonus" Type="int" Mode="In" />
+          <Parameter Name="Balance" Type="int" Mode="In" />
+          <Parameter Name="Action" Type="nvarchar" Mode="In" />
+          <Parameter Name="EventCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="BuidingCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="PCCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="LineCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="AreaCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="ObjectCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="CardTypeCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="ShiftCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsServer1" Type="bit" Mode="In" />
+          <Parameter Name="IsServer2" Type="bit" Mode="In" />
+          <Parameter Name="EventID" Type="varchar" Mode="In" />
+          <Parameter Name="ProductCode" Type="varchar" Mode="In" />
+          <Parameter Name="CardDeposit" Type="int" Mode="In" />
+          <Parameter Name="ReturnVal" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SelectFromRecord" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_BCTheoDoiTuong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_BCTheoKhuVuc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_capnhatsodu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_CardProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_DTBanHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="StartDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+          <Parameter Name="buiding" Type="varchar" Mode="In" />
+          <Parameter Name="area" Type="varchar" Mode="In" />
+          <Parameter Name="object" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_DTBanHangTongHop" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="StartDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+          <Parameter Name="Buiding" Type="nvarchar" Mode="In" />
+          <Parameter Name="Area" Type="nvarchar" Mode="In" />
+          <Parameter Name="Object" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_DTBanThe" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="StartDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+          <Parameter Name="buiding" Type="varchar" Mode="In" />
+          <Parameter Name="area" Type="varchar" Mode="In" />
+          <Parameter Name="object" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_DTBanTheTongHop" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="StartDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+          <Parameter Name="Buiding" Type="nvarchar" Mode="In" />
+          <Parameter Name="Area" Type="nvarchar" Mode="In" />
+          <Parameter Name="Object" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_EventAlarm" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_findCard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Code" Type="nvarchar" Mode="In" />
+          <Parameter Name="CardNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="CardType" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_GetBackList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_GetCard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ch" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_GetListCard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_GiaoDichGanNhat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CardNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="StartDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_LocCard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="buiding" Type="varchar" Mode="In" />
+          <Parameter Name="area" Type="varchar" Mode="In" />
+          <Parameter Name="object" Type="varchar" Mode="In" />
+          <Parameter Name="typeCard" Type="varchar" Mode="In" />
+          <Parameter Name="cardNumber" Type="varchar" Mode="In" />
+          <Parameter Name="CusID" Type="varchar" Mode="In" />
+          <Parameter Name="CusName" Type="nvarchar" Mode="In" />
+          <Parameter Name="status" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Log" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="User" Type="varchar" Mode="In" />
+          <Parameter Name="Pass" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Record" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="StartDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+          <Parameter Name="Buiding" Type="nvarchar" Mode="In" />
+          <Parameter Name="Area" Type="nvarchar" Mode="In" />
+          <Parameter Name="PC" Type="nvarchar" Mode="In" />
+          <Parameter Name="Object" Type="nvarchar" Mode="In" />
+          <Parameter Name="Function" Type="nvarchar" Mode="In" />
+          <Parameter Name="EventCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="TypeCard" Type="nvarchar" Mode="In" />
+          <Parameter Name="CardNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="User" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_TatCaGiaoDich" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="StartDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+          <Parameter Name="buiding" Type="varchar" Mode="In" />
+          <Parameter Name="area" Type="varchar" Mode="In" />
+          <Parameter Name="object" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_TheTrungNhau" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_ThongKeThe" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="buiding" Type="varchar" Mode="In" />
+          <Parameter Name="area" Type="varchar" Mode="In" />
+          <Parameter Name="object" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_ThongKeTheChiTiet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="buiding" Type="varchar" Mode="In" />
+          <Parameter Name="area" Type="varchar" Mode="In" />
+          <Parameter Name="object" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_UpdateCard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ch" Type="nvarchar" Mode="In" />
+          <Parameter Name="Card" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <!--Errors Found During Generation:
+      warning 6005: The function 'sp_InserttblEvent' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_InserttblEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      Errors Found During Generation:
+      warning 6005: The function 'sp_InserttblRecord' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_InserttblRecord" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />-->
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FDIModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="FDIEntities" p1:LazyLoadingEnabled="true">
+          <FunctionImport Name="DeleteIssuedCard">
+          <Parameter Name="cardnumber" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="InsertIntoCard">
+            <Parameter Name="Code" Mode="In" Type="String" />
+            <Parameter Name="CardNumber" Mode="In" Type="String" />
+            <Parameter Name="AccountName" Mode="In" Type="String" />
+            <Parameter Name="Balance" Mode="In" Type="Int32" />
+            <Parameter Name="CardTypeCode" Mode="In" Type="String" />
+            <Parameter Name="IsRelease" Mode="In" Type="Boolean" />
+            <Parameter Name="IsLockCard" Mode="In" Type="Boolean" />
+            <Parameter Name="IsEdit" Mode="In" Type="Boolean" />
+            <Parameter Name="DateModified" Mode="In" Type="DateTime" />
+            <Parameter Name="CardStatus" Mode="In" Type="String" />
+            <Parameter Name="OwnerCode" Mode="In" Type="String" />
+            <Parameter Name="DateIssue" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="InsertIntoEvent" ReturnType="Collection(Decimal)">
+            <Parameter Name="Date" Mode="In" Type="DateTime" />
+            <Parameter Name="CardNumber" Mode="In" Type="String" />
+            <Parameter Name="MID" Mode="In" Type="String" />
+            <Parameter Name="FID" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="Int32" />
+            <Parameter Name="Balance" Mode="In" Type="Int32" />
+            <Parameter Name="Action" Mode="In" Type="String" />
+            <Parameter Name="EventCode" Mode="In" Type="String" />
+            <Parameter Name="BuidingCode" Mode="In" Type="String" />
+            <Parameter Name="PCCode" Mode="In" Type="String" />
+            <Parameter Name="LineCode" Mode="In" Type="String" />
+            <Parameter Name="AreaCode" Mode="In" Type="String" />
+            <Parameter Name="ObjectCode" Mode="In" Type="String" />
+            <Parameter Name="CardTypeCode" Mode="In" Type="String" />
+            <Parameter Name="UserCode" Mode="In" Type="String" />
+            <Parameter Name="EventID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="InsertIntoRecord" ReturnType="Collection(Decimal)">
+            <Parameter Name="Date" Mode="In" Type="DateTime" />
+            <Parameter Name="CardNumber" Mode="In" Type="String" />
+            <Parameter Name="MID" Mode="In" Type="String" />
+            <Parameter Name="FID" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="Int32" />
+            <Parameter Name="Bonus" Mode="In" Type="Int32" />
+            <Parameter Name="Balance" Mode="In" Type="Int32" />
+            <Parameter Name="Action" Mode="In" Type="String" />
+            <Parameter Name="EventCode" Mode="In" Type="String" />
+            <Parameter Name="BuidingCode" Mode="In" Type="String" />
+            <Parameter Name="PCCode" Mode="In" Type="String" />
+            <Parameter Name="LineCode" Mode="In" Type="String" />
+            <Parameter Name="AreaCode" Mode="In" Type="String" />
+            <Parameter Name="ObjectCode" Mode="In" Type="String" />
+            <Parameter Name="CardTypeCode" Mode="In" Type="String" />
+            <Parameter Name="ShiftCode" Mode="In" Type="String" />
+            <Parameter Name="UserCode" Mode="In" Type="String" />
+            <Parameter Name="IsServer1" Mode="In" Type="Boolean" />
+            <Parameter Name="IsServer2" Mode="In" Type="Boolean" />
+            <Parameter Name="EventID" Mode="In" Type="String" />
+            <Parameter Name="ProductCode" Mode="In" Type="String" />
+            <Parameter Name="CardDeposit" Mode="In" Type="Int32" />
+            <Parameter Name="ReturnVal" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SelectFromRecord" />
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_BCTheoDoiTuong" ReturnType="Collection(FDIModel.sp_BCTheoDoiTuong_Result)" />
+          <FunctionImport Name="sp_BCTheoKhuVuc" ReturnType="Collection(FDIModel.sp_BCTheoKhuVuc_Result)" />
+          <FunctionImport Name="sp_capnhatsodu" />
+          <FunctionImport Name="sp_CardProcess" ReturnType="Collection(FDIModel.sp_CardProcess_Result)" />
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_DTBanHang" ReturnType="Collection(FDIModel.sp_DTBanHang_Result)">
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+            <Parameter Name="buiding" Mode="In" Type="String" />
+            <Parameter Name="area" Mode="In" Type="String" />
+            <Parameter Name="object" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_DTBanHangTongHop" ReturnType="Collection(FDIModel.sp_DTBanHangTongHop_Result)">
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Buiding" Mode="In" Type="String" />
+            <Parameter Name="Area" Mode="In" Type="String" />
+            <Parameter Name="Object" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_DTBanThe" ReturnType="Collection(FDIModel.sp_DTBanThe_Result)">
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+            <Parameter Name="buiding" Mode="In" Type="String" />
+            <Parameter Name="area" Mode="In" Type="String" />
+            <Parameter Name="object" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_DTBanTheTongHop" ReturnType="Collection(FDIModel.sp_DTBanTheTongHop_Result)">
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Buiding" Mode="In" Type="String" />
+            <Parameter Name="Area" Mode="In" Type="String" />
+            <Parameter Name="Object" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_EventAlarm" ReturnType="Collection(FDIModel.sp_EventAlarm_Result)" />
+          <FunctionImport Name="sp_findCard" ReturnType="Collection(FDIModel.sp_findCard_Result)">
+            <Parameter Name="Code" Mode="In" Type="String" />
+            <Parameter Name="CardNumber" Mode="In" Type="String" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="CardType" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetBackList" ReturnType="Collection(FDIModel.sp_GetBackList_Result)" />
+          <FunctionImport Name="sp_GetCard" ReturnType="Collection(FDIModel.sp_GetCard_Result)">
+          <Parameter Name="ch" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetListCard" ReturnType="Collection(FDIModel.sp_GetListCard_Result)">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GiaoDichGanNhat" ReturnType="Collection(FDIModel.sp_GiaoDichGanNhat_Result)">
+            <Parameter Name="CardNumber" Mode="In" Type="String" />
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(FDIModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(FDIModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_LocCard" ReturnType="Collection(FDIModel.sp_LocCard_Result)">
+            <Parameter Name="buiding" Mode="In" Type="String" />
+            <Parameter Name="area" Mode="In" Type="String" />
+            <Parameter Name="object" Mode="In" Type="String" />
+            <Parameter Name="typeCard" Mode="In" Type="String" />
+            <Parameter Name="cardNumber" Mode="In" Type="String" />
+            <Parameter Name="CusID" Mode="In" Type="String" />
+            <Parameter Name="CusName" Mode="In" Type="String" />
+            <Parameter Name="status" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Log" ReturnType="Collection(FDIModel.sp_Log_Result)" />
+          <FunctionImport Name="sp_Login" ReturnType="Collection(FDIModel.sp_Login_Result)">
+            <Parameter Name="User" Mode="In" Type="String" />
+            <Parameter Name="Pass" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Record" ReturnType="Collection(FDIModel.sp_Record_Result)">
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Buiding" Mode="In" Type="String" />
+            <Parameter Name="Area" Mode="In" Type="String" />
+            <Parameter Name="PC" Mode="In" Type="String" />
+            <Parameter Name="Object" Mode="In" Type="String" />
+            <Parameter Name="Function" Mode="In" Type="String" />
+            <Parameter Name="EventCode" Mode="In" Type="String" />
+            <Parameter Name="TypeCard" Mode="In" Type="String" />
+            <Parameter Name="CardNumber" Mode="In" Type="String" />
+            <Parameter Name="User" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_TatCaGiaoDich" ReturnType="Collection(FDIModel.sp_TatCaGiaoDich_Result)">
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+            <Parameter Name="buiding" Mode="In" Type="String" />
+            <Parameter Name="area" Mode="In" Type="String" />
+            <Parameter Name="object" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_TheTrungNhau" ReturnType="Collection(FDIModel.sp_TheTrungNhau_Result)" />
+          <FunctionImport Name="sp_ThongKeThe" ReturnType="Collection(FDIModel.sp_ThongKeThe_Result)">
+            <Parameter Name="buiding" Mode="In" Type="String" />
+            <Parameter Name="area" Mode="In" Type="String" />
+            <Parameter Name="object" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ThongKeTheChiTiet" ReturnType="Collection(FDIModel.sp_ThongKeTheChiTiet_Result)">
+            <Parameter Name="buiding" Mode="In" Type="String" />
+            <Parameter Name="area" Mode="In" Type="String" />
+            <Parameter Name="object" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_UpdateCard">
+            <Parameter Name="ch" Mode="In" Type="String" />
+            <Parameter Name="Card" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="Products" EntityType="FDIModel.Product" />
+          <EntitySet Name="ProductCategories" EntityType="FDIModel.ProductCategory" />
+          <EntitySet Name="Roles" EntityType="FDIModel.Role" />
+          <EntitySet Name="sysdiagrams" EntityType="FDIModel.sysdiagram" />
+          <EntitySet Name="tblAreas" EntityType="FDIModel.tblArea" />
+          <EntitySet Name="tblBlackLists" EntityType="FDIModel.tblBlackList" />
+          <EntitySet Name="tblBuidings" EntityType="FDIModel.tblBuiding" />
+          <EntitySet Name="tblCards" EntityType="FDIModel.tblCard" />
+          <EntitySet Name="tblCardProcesses" EntityType="FDIModel.tblCardProcess" />
+          <EntitySet Name="tblCardTypes" EntityType="FDIModel.tblCardType" />
+          <EntitySet Name="tblCustomers" EntityType="FDIModel.tblCustomer" />
+          <EntitySet Name="tblCustomerClasses" EntityType="FDIModel.tblCustomerClass" />
+          <EntitySet Name="tblDBInfoes" EntityType="FDIModel.tblDBInfo" />
+          <EntitySet Name="tblEvents" EntityType="FDIModel.tblEvent" />
+          <EntitySet Name="tblEventAlarms" EntityType="FDIModel.tblEventAlarm" />
+          <EntitySet Name="tblEventCodes" EntityType="FDIModel.tblEventCode" />
+          <EntitySet Name="tblFunctions" EntityType="FDIModel.tblFunction" />
+          <EntitySet Name="tblLines" EntityType="FDIModel.tblLine" />
+          <EntitySet Name="tblLogs" EntityType="FDIModel.tblLog" />
+          <EntitySet Name="tblObjects" EntityType="FDIModel.tblObject" />
+          <EntitySet Name="tblPCs" EntityType="FDIModel.tblPC" />
+          <EntitySet Name="tblRecords" EntityType="FDIModel.tblRecord" />
+          <EntitySet Name="tblSystemConfigs" EntityType="FDIModel.tblSystemConfig" />
+          <EntitySet Name="tblUsers" EntityType="FDIModel.tblUser" />
+        </EntityContainer>
+        <ComplexType Name="sp_BCTheoDoiTuong_Result">
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="Object" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="CountValue" Nullable="true" Precision="38" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="sp_BCTheoKhuVuc_Result">
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="CountValue" Nullable="true" Precision="38" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="sp_CardProcess_Result">
+          <Property Type="Int64" Name="STT" Nullable="true" />
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="Value" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_DTBanHang_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CardNumber" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Event" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EventCode" Nullable="true" MaxLength="2" />
+          <Property Type="Decimal" Name="Value" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="Balance" Nullable="true" />
+          <Property Type="String" Name="Object" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_DTBanHangTongHop_Result">
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="43" />
+          <Property Type="Decimal" Name="Value" Nullable="true" Precision="38" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="sp_DTBanThe_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CardNumber" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Event" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EventCode" Nullable="true" MaxLength="2" />
+          <Property Type="Decimal" Name="Value" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="Balance" Nullable="true" />
+          <Property Type="String" Name="Object" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_DTBanTheTongHop_Result">
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="24" />
+          <Property Type="Decimal" Name="Value" Nullable="true" Precision="38" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="sp_EventAlarm_Result">
+          <Property Type="Int64" Name="RowNumber" Nullable="true" />
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="BuidingCode" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="Object" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EventCode" Nullable="true" MaxLength="2" />
+        </ComplexType>
+        <ComplexType Name="sp_findCard_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CardNumber" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="AccountName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Balance" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="String" Name="CardTypeCode" Nullable="true" MaxLength="2" />
+          <Property Type="Boolean" Name="IsRelease" Nullable="true" />
+          <Property Type="Boolean" Name="IsLockCard" Nullable="true" />
+          <Property Type="Boolean" Name="IsEdit" Nullable="false" />
+          <Property Type="DateTime" Name="DateModified" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CardStatus" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="DateIssue" Nullable="true" Precision="23" />
+          <Property Type="String" Name="NameType" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_GetBackList_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="CardStatus" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CustomerID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CardType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CardTypeCode" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="SchoolYear" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="BirthDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="CustomerClass" Nullable="true" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Desc" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_GetCard_Result">
+          <Property Type="String" Name="CardNumber" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="AccountName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NameType" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="sp_GetListCard_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="CardNumber" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Balance" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="String" Name="CardStatus" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="DateIssue" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CustomerID" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CardType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CardTypeCode" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="SchoolYear" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="BirthDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="CustomerClass" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_GiaoDichGanNhat_Result">
+          <Property Type="Decimal" Name="Value" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="Object" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Event" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Balance" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_LocCard_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="CustomerID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="CardNumber" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Balance" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="String" Name="CardType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CardStatus" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="DateIssue" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="sp_Log_Result">
+          <Property Type="Int64" Name="STT" Nullable="true" />
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="DateTime" Name="Datetime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Object" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Message" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_Login_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="UserName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FullName" Nullable="true" MaxLength="50" />
+          <Property Type="Byte" Name="Right1" Nullable="true" />
+          <Property Type="String" Name="AreaCode" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="BuidingCode" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="AreaName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_Record_Result">
+          <Property Type="String" Name="CardNumber" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="Value" Nullable="true" Precision="19" Scale="0" />
+          <Property Type="Int32" Name="Balance" Nullable="true" />
+          <Property Type="String" Name="Action" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="EventID" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="AccountName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CardType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Buiding" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="UserName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_TatCaGiaoDich_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CardNumber" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Event" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EventCode" Nullable="true" MaxLength="2" />
+          <Property Type="Decimal" Name="Value" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="Object" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_TheTrungNhau_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="CardNumber" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Balance" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="String" Name="CardStatus" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="DateIssue" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CustomerID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CardType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CardTypeCode" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="SchoolYear" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="BirthDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="CustomerClass" Nullable="true" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_ThongKeThe_Result">
+          <Property Type="String" Name="NameType" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="TotalNotUsed" Nullable="true" />
+          <Property Type="Int32" Name="TotalUsed" Nullable="true" />
+          <Property Type="Int32" Name="TotalBlock" Nullable="true" />
+          <Property Type="Int32" Name="TotalCard" Nullable="true" />
+          <Property Type="Decimal" Name="TotalBalance" Nullable="true" Precision="38" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="sp_ThongKeTheChiTiet_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="CardNumber" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Balance" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="String" Name="CardStatus" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="DateIssue" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CustomerID" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CardType" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Unit" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UnitPrice" />
+          <Property Type="String" Name="ProductCategoryCode" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Desc" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsInactive" />
+          <Property Type="String" Name="Temp1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp3" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp4" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp5" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp6" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp7" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp8" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp9" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp10" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Desc" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsInactive" />
+          <Property Type="String" Name="Temp1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp3" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp4" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp5" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserCode" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AreaCode" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BuidingCode" MaxLength="5" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblArea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Desc" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuidingCode" MaxLength="2" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblBlackList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Date" Precision="3" />
+          <Property Type="Int32" Name="MemoryID" />
+          <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ToObjects" MaxLength="2048" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsInActive" />
+          <Property Type="String" Name="Desc" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Balance" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tblBuiding">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Desc" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblCard">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CardNumber" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AccountName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Balance" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="String" Name="CardTypeCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsRelease" />
+          <Property Type="Boolean" Name="IsLockCard" />
+          <Property Type="Boolean" Name="IsEdit" Nullable="false" />
+          <Property Type="DateTime" Name="DateModified" Precision="3" />
+          <Property Type="String" Name="CardStatus" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OwnerCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DateIssue" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblCardProcess">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Date" Precision="3" />
+          <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Value" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblCardType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="Discount" />
+          <Property Type="String" Name="Desc" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsMemberCard" />
+          <Property Type="Int32" Name="PointLevel" />
+          <Property Type="String" Name="Temp1" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp2" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp3" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp4" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp5" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblCustomer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Type="String" Name="CustomerID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CustomerName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CustomerClass" />
+          <Property Type="DateTime" Name="BirthDate" Precision="3" />
+          <Property Type="String" Name="SchoolYear" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PassWord" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblCustomerClass">
+          <Key>
+            <PropertyRef Name="CustomerClassID" />
+          </Key>
+          <Property Type="Int32" Name="CustomerClassID" Nullable="false" />
+          <Property Type="Int32" Name="CustomerClass" />
+          <Property Type="String" Name="CustomerClassName" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblDBInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Version" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UpdateTime" Precision="3" />
+          <Property Type="String" Name="UpdateFile" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Desc" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblEvent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Date" Precision="3" />
+          <Property Type="String" Name="CardNumber" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MID" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FID" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Value" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="Balance" />
+          <Property Type="String" Name="Action" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EventCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuidingCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PCCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LineCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AreaCode" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ObjectCode" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CardTypeCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShiftCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="InOut" />
+          <Property Type="Boolean" Name="IsServer1" />
+          <Property Type="Boolean" Name="IsServer2" />
+          <Property Type="String" Name="EventID" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProductCode" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsSync" />
+        </EntityType>
+        <EntityType Name="tblEventAlarm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Date" Precision="3" />
+          <Property Type="String" Name="BuidingCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Object" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EventCode" MaxLength="2" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblEventCode">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblFunction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FID" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Value" />
+          <Property Type="String" Name="Desc" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblLine">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuidingCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PCCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Desc" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ComPort" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BaudRate" />
+          <Property Type="Byte" Name="CommunicationType" />
+          <Property Type="Int32" Name="LineTypeID" />
+          <Property Type="Boolean" Name="IsInActive" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Datetime" Precision="3" />
+          <Property Type="String" Name="Object" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Message" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblObject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LineCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MID" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FID" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Value" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Desc" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="InOut" />
+          <Property Type="Byte" Name="NumEvent" />
+          <Property Type="String" Name="AreaCode" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ObjectTypeID" />
+          <Property Type="Boolean" Name="IsInActive" />
+          <Property Type="Boolean" Name="IsPC" />
+          <Property Type="String" Name="NetAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblPC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Desc" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IP" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuidingCode" MaxLength="2" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Date" Precision="3" />
+          <Property Type="String" Name="CardNumber" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MID" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FID" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Value" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="Bonus" />
+          <Property Type="Int32" Name="Balance" />
+          <Property Type="String" Name="Action" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EventCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuidingCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PCCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LineCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AreaCode" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ObjectCode" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CardTypeCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShiftCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserCode" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsServer1" />
+          <Property Type="Boolean" Name="IsServer2" />
+          <Property Type="String" Name="EventID" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProductCode" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CardDeposit" />
+          <Property Type="Int32" Name="ReturnVal" />
+          <Property Type="Boolean" Name="IsSync" />
+          <Property Type="Boolean" Name="IsBankTransfer" />
+        </EntityType>
+        <EntityType Name="tblSystemConfig">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SystemCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="KeyA" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="KeyB" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Discount" />
+          <Property Type="Int32" Name="DepositForCard" />
+          <Property Type="String" Name="Company" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Tel" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsPointLevel" />
+          <Property Type="Boolean" Name="IsAcceptNewCard" />
+          <Property Type="Boolean" Name="IsInsertNewCard" />
+          <Property Type="Int32" Name="MaxBalance" />
+          <Property Type="Int32" Name="MinBalance" />
+          <Property Type="Boolean" Name="IsCheckExistPC" />
+          <Property Type="String" Name="Temp1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp3" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp4" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp5" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp6" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp7" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp8" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp9" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Temp10" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ReturnVal" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CardNumber" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FullName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="Right1" />
+          <Property Type="Boolean" Name="IsLockUser" Nullable="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FDIModelStoreContainer" CdmEntityContainer="FDIEntities">
+          <FunctionImportMapping FunctionImportName="DeleteIssuedCard" FunctionName="FDIModel.Store.DeleteIssuedCard" />
+          <FunctionImportMapping FunctionImportName="InsertIntoCard" FunctionName="FDIModel.Store.InsertIntoCard" />
+          <FunctionImportMapping FunctionImportName="InsertIntoEvent" FunctionName="FDIModel.Store.InsertIntoEvent" />
+          <FunctionImportMapping FunctionImportName="InsertIntoRecord" FunctionName="FDIModel.Store.InsertIntoRecord" />
+          <FunctionImportMapping FunctionImportName="SelectFromRecord" FunctionName="FDIModel.Store.SelectFromRecord" />
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="FDIModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_BCTheoDoiTuong" FunctionName="FDIModel.Store.sp_BCTheoDoiTuong">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_BCTheoDoiTuong_Result">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Object" ColumnName="Object" />
+                <ScalarProperty Name="CountValue" ColumnName="CountValue" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_BCTheoKhuVuc" FunctionName="FDIModel.Store.sp_BCTheoKhuVuc">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_BCTheoKhuVuc_Result">
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="CountValue" ColumnName="CountValue" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_capnhatsodu" FunctionName="FDIModel.Store.sp_capnhatsodu" />
+          <FunctionImportMapping FunctionImportName="sp_CardProcess" FunctionName="FDIModel.Store.sp_CardProcess">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_CardProcess_Result">
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="FDIModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="FDIModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_DTBanHang" FunctionName="FDIModel.Store.sp_DTBanHang">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_DTBanHang_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Object" ColumnName="Object" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_DTBanHangTongHop" FunctionName="FDIModel.Store.sp_DTBanHangTongHop">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_DTBanHangTongHop_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_DTBanThe" FunctionName="FDIModel.Store.sp_DTBanThe">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_DTBanThe_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Object" ColumnName="Object" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_DTBanTheTongHop" FunctionName="FDIModel.Store.sp_DTBanTheTongHop">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_DTBanTheTongHop_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_EventAlarm" FunctionName="FDIModel.Store.sp_EventAlarm">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_EventAlarm_Result">
+                <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+                <ScalarProperty Name="Object" ColumnName="Object" />
+                <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_findCard" FunctionName="FDIModel.Store.sp_findCard">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_findCard_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+                <ScalarProperty Name="IsRelease" ColumnName="IsRelease" />
+                <ScalarProperty Name="IsLockCard" ColumnName="IsLockCard" />
+                <ScalarProperty Name="IsEdit" ColumnName="IsEdit" />
+                <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+                <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+                <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+                <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+                <ScalarProperty Name="NameType" ColumnName="NameType" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetBackList" FunctionName="FDIModel.Store.sp_GetBackList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_GetBackList_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CardType" ColumnName="CardType" />
+                <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+                <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="CustomerClass" ColumnName="CustomerClass" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetCard" FunctionName="FDIModel.Store.sp_GetCard">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_GetCard_Result">
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="NameType" ColumnName="NameType" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetListCard" FunctionName="FDIModel.Store.sp_GetListCard">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_GetListCard_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+                <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CardType" ColumnName="CardType" />
+                <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+                <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="CustomerClass" ColumnName="CustomerClass" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GiaoDichGanNhat" FunctionName="FDIModel.Store.sp_GiaoDichGanNhat">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_GiaoDichGanNhat_Result">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Object" ColumnName="Object" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="FDIModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="FDIModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_LocCard" FunctionName="FDIModel.Store.sp_LocCard">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_LocCard_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="CardType" ColumnName="CardType" />
+                <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+                <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Log" FunctionName="FDIModel.Store.sp_Log">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_Log_Result">
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+                <ScalarProperty Name="Object" ColumnName="Object" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Login" FunctionName="FDIModel.Store.sp_Login">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_Login_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Right1" ColumnName="Right1" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Record" FunctionName="FDIModel.Store.sp_Record">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_Record_Result">
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="CardType" ColumnName="CardType" />
+                <ScalarProperty Name="Buiding" ColumnName="Buiding" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="FDIModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_TatCaGiaoDich" FunctionName="FDIModel.Store.sp_TatCaGiaoDich">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_TatCaGiaoDich_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Object" ColumnName="Object" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_TheTrungNhau" FunctionName="FDIModel.Store.sp_TheTrungNhau">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_TheTrungNhau_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+                <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CardType" ColumnName="CardType" />
+                <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+                <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="CustomerClass" ColumnName="CustomerClass" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ThongKeThe" FunctionName="FDIModel.Store.sp_ThongKeThe">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_ThongKeThe_Result">
+                <ScalarProperty Name="NameType" ColumnName="NameType" />
+                <ScalarProperty Name="TotalNotUsed" ColumnName="TotalNotUsed" />
+                <ScalarProperty Name="TotalUsed" ColumnName="TotalUsed" />
+                <ScalarProperty Name="TotalBlock" ColumnName="TotalBlock" />
+                <ScalarProperty Name="TotalCard" ColumnName="TotalCard" />
+                <ScalarProperty Name="TotalBalance" ColumnName="TotalBalance" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ThongKeTheChiTiet" FunctionName="FDIModel.Store.sp_ThongKeTheChiTiet">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FDIModel.sp_ThongKeTheChiTiet_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+                <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CardType" ColumnName="CardType" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_UpdateCard" FunctionName="FDIModel.Store.sp_UpdateCard" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="FDIModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="FDIModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="Temp10" ColumnName="Temp10" />
+                <ScalarProperty Name="Temp9" ColumnName="Temp9" />
+                <ScalarProperty Name="Temp8" ColumnName="Temp8" />
+                <ScalarProperty Name="Temp7" ColumnName="Temp7" />
+                <ScalarProperty Name="Temp6" ColumnName="Temp6" />
+                <ScalarProperty Name="Temp5" ColumnName="Temp5" />
+                <ScalarProperty Name="Temp4" ColumnName="Temp4" />
+                <ScalarProperty Name="Temp3" ColumnName="Temp3" />
+                <ScalarProperty Name="Temp2" ColumnName="Temp2" />
+                <ScalarProperty Name="Temp1" ColumnName="Temp1" />
+                <ScalarProperty Name="IsInactive" ColumnName="IsInactive" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="ProductCategoryCode" ColumnName="ProductCategoryCode" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductCategories">
+            <EntityTypeMapping TypeName="FDIModel.ProductCategory">
+              <MappingFragment StoreEntitySet="ProductCategory">
+                <ScalarProperty Name="Temp5" ColumnName="Temp5" />
+                <ScalarProperty Name="Temp4" ColumnName="Temp4" />
+                <ScalarProperty Name="Temp3" ColumnName="Temp3" />
+                <ScalarProperty Name="Temp2" ColumnName="Temp2" />
+                <ScalarProperty Name="Temp1" ColumnName="Temp1" />
+                <ScalarProperty Name="IsInactive" ColumnName="IsInactive" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="FDIModel.Role">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="FDIModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAreas">
+            <EntityTypeMapping TypeName="FDIModel.tblArea">
+              <MappingFragment StoreEntitySet="tblArea">
+                <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblBlackLists">
+            <EntityTypeMapping TypeName="FDIModel.tblBlackList">
+              <MappingFragment StoreEntitySet="tblBlackList">
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="IsInActive" ColumnName="IsInActive" />
+                <ScalarProperty Name="ToObjects" ColumnName="ToObjects" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="MemoryID" ColumnName="MemoryID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblBuidings">
+            <EntityTypeMapping TypeName="FDIModel.tblBuiding">
+              <MappingFragment StoreEntitySet="tblBuiding">
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCards">
+            <EntityTypeMapping TypeName="FDIModel.tblCard">
+              <MappingFragment StoreEntitySet="tblCard">
+                <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+                <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+                <ScalarProperty Name="CardStatus" ColumnName="CardStatus" />
+                <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+                <ScalarProperty Name="IsEdit" ColumnName="IsEdit" />
+                <ScalarProperty Name="IsLockCard" ColumnName="IsLockCard" />
+                <ScalarProperty Name="IsRelease" ColumnName="IsRelease" />
+                <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCardProcesses">
+            <EntityTypeMapping TypeName="FDIModel.tblCardProcess">
+              <MappingFragment StoreEntitySet="tblCardProcess">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCardTypes">
+            <EntityTypeMapping TypeName="FDIModel.tblCardType">
+              <MappingFragment StoreEntitySet="tblCardType">
+                <ScalarProperty Name="Temp5" ColumnName="Temp5" />
+                <ScalarProperty Name="Temp4" ColumnName="Temp4" />
+                <ScalarProperty Name="Temp3" ColumnName="Temp3" />
+                <ScalarProperty Name="Temp2" ColumnName="Temp2" />
+                <ScalarProperty Name="Temp1" ColumnName="Temp1" />
+                <ScalarProperty Name="PointLevel" ColumnName="PointLevel" />
+                <ScalarProperty Name="IsMemberCard" ColumnName="IsMemberCard" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCustomers">
+            <EntityTypeMapping TypeName="FDIModel.tblCustomer">
+              <MappingFragment StoreEntitySet="tblCustomer">
+                <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+                <ScalarProperty Name="SchoolYear" ColumnName="SchoolYear" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="CustomerClass" ColumnName="CustomerClass" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCustomerClasses">
+            <EntityTypeMapping TypeName="FDIModel.tblCustomerClass">
+              <MappingFragment StoreEntitySet="tblCustomerClass">
+                <ScalarProperty Name="CustomerClassName" ColumnName="CustomerClassName" />
+                <ScalarProperty Name="CustomerClass" ColumnName="CustomerClass" />
+                <ScalarProperty Name="CustomerClassID" ColumnName="CustomerClassID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblDBInfoes">
+            <EntityTypeMapping TypeName="FDIModel.tblDBInfo">
+              <MappingFragment StoreEntitySet="tblDBInfo">
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="UpdateFile" ColumnName="UpdateFile" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEvents">
+            <EntityTypeMapping TypeName="FDIModel.tblEvent">
+              <MappingFragment StoreEntitySet="tblEvent">
+                <ScalarProperty Name="IsSync" ColumnName="IsSync" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="IsServer2" ColumnName="IsServer2" />
+                <ScalarProperty Name="IsServer1" ColumnName="IsServer1" />
+                <ScalarProperty Name="InOut" ColumnName="InOut" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+                <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+                <ScalarProperty Name="ObjectCode" ColumnName="ObjectCode" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="LineCode" ColumnName="LineCode" />
+                <ScalarProperty Name="PCCode" ColumnName="PCCode" />
+                <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+                <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+                <ScalarProperty Name="MID" ColumnName="MID" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEventAlarms">
+            <EntityTypeMapping TypeName="FDIModel.tblEventAlarm">
+              <MappingFragment StoreEntitySet="tblEventAlarm">
+                <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+                <ScalarProperty Name="Object" ColumnName="Object" />
+                <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEventCodes">
+            <EntityTypeMapping TypeName="FDIModel.tblEventCode">
+              <MappingFragment StoreEntitySet="tblEventCode">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFunctions">
+            <EntityTypeMapping TypeName="FDIModel.tblFunction">
+              <MappingFragment StoreEntitySet="tblFunction">
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLines">
+            <EntityTypeMapping TypeName="FDIModel.tblLine">
+              <MappingFragment StoreEntitySet="tblLine">
+                <ScalarProperty Name="IsInActive" ColumnName="IsInActive" />
+                <ScalarProperty Name="LineTypeID" ColumnName="LineTypeID" />
+                <ScalarProperty Name="CommunicationType" ColumnName="CommunicationType" />
+                <ScalarProperty Name="BaudRate" ColumnName="BaudRate" />
+                <ScalarProperty Name="ComPort" ColumnName="ComPort" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PCCode" ColumnName="PCCode" />
+                <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLogs">
+            <EntityTypeMapping TypeName="FDIModel.tblLog">
+              <MappingFragment StoreEntitySet="tblLog">
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Object" ColumnName="Object" />
+                <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblObjects">
+            <EntityTypeMapping TypeName="FDIModel.tblObject">
+              <MappingFragment StoreEntitySet="tblObject">
+                <ScalarProperty Name="NetAddress" ColumnName="NetAddress" />
+                <ScalarProperty Name="IsPC" ColumnName="IsPC" />
+                <ScalarProperty Name="IsInActive" ColumnName="IsInActive" />
+                <ScalarProperty Name="ObjectTypeID" ColumnName="ObjectTypeID" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="NumEvent" ColumnName="NumEvent" />
+                <ScalarProperty Name="InOut" ColumnName="InOut" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+                <ScalarProperty Name="MID" ColumnName="MID" />
+                <ScalarProperty Name="LineCode" ColumnName="LineCode" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPCs">
+            <EntityTypeMapping TypeName="FDIModel.tblPC">
+              <MappingFragment StoreEntitySet="tblPC">
+                <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblRecords">
+            <EntityTypeMapping TypeName="FDIModel.tblRecord">
+              <MappingFragment StoreEntitySet="tblRecord">
+                <ScalarProperty Name="IsBankTransfer" ColumnName="IsBankTransfer" />
+                <ScalarProperty Name="IsSync" ColumnName="IsSync" />
+                <ScalarProperty Name="ReturnVal" ColumnName="ReturnVal" />
+                <ScalarProperty Name="CardDeposit" ColumnName="CardDeposit" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="IsServer2" ColumnName="IsServer2" />
+                <ScalarProperty Name="IsServer1" ColumnName="IsServer1" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+                <ScalarProperty Name="CardTypeCode" ColumnName="CardTypeCode" />
+                <ScalarProperty Name="ObjectCode" ColumnName="ObjectCode" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="LineCode" ColumnName="LineCode" />
+                <ScalarProperty Name="PCCode" ColumnName="PCCode" />
+                <ScalarProperty Name="BuidingCode" ColumnName="BuidingCode" />
+                <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+                <ScalarProperty Name="MID" ColumnName="MID" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSystemConfigs">
+            <EntityTypeMapping TypeName="FDIModel.tblSystemConfig">
+              <MappingFragment StoreEntitySet="tblSystemConfig">
+                <ScalarProperty Name="ReturnVal" ColumnName="ReturnVal" />
+                <ScalarProperty Name="Temp10" ColumnName="Temp10" />
+                <ScalarProperty Name="Temp9" ColumnName="Temp9" />
+                <ScalarProperty Name="Temp8" ColumnName="Temp8" />
+                <ScalarProperty Name="Temp7" ColumnName="Temp7" />
+                <ScalarProperty Name="Temp6" ColumnName="Temp6" />
+                <ScalarProperty Name="Temp5" ColumnName="Temp5" />
+                <ScalarProperty Name="Temp4" ColumnName="Temp4" />
+                <ScalarProperty Name="Temp3" ColumnName="Temp3" />
+                <ScalarProperty Name="Temp2" ColumnName="Temp2" />
+                <ScalarProperty Name="Temp1" ColumnName="Temp1" />
+                <ScalarProperty Name="IsCheckExistPC" ColumnName="IsCheckExistPC" />
+                <ScalarProperty Name="MinBalance" ColumnName="MinBalance" />
+                <ScalarProperty Name="MaxBalance" ColumnName="MaxBalance" />
+                <ScalarProperty Name="IsInsertNewCard" ColumnName="IsInsertNewCard" />
+                <ScalarProperty Name="IsAcceptNewCard" ColumnName="IsAcceptNewCard" />
+                <ScalarProperty Name="IsPointLevel" ColumnName="IsPointLevel" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="DepositForCard" ColumnName="DepositForCard" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="KeyB" ColumnName="KeyB" />
+                <ScalarProperty Name="KeyA" ColumnName="KeyA" />
+                <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUsers">
+            <EntityTypeMapping TypeName="FDIModel.tblUser">
+              <MappingFragment StoreEntitySet="tblUser">
+                <ScalarProperty Name="IsLockUser" ColumnName="IsLockUser" />
+                <ScalarProperty Name="Right1" ColumnName="Right1" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
