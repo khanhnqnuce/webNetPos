@@ -1,0 +1,4 @@
+﻿@media only screen and (max-width: 1366px)  {
+     .fixel-footer .login-footer {  position: relative; float: left; margin-top: 0;}
+    .fixel-footer .login-content { height: auto; position: relative; float: left; width: 100%; padding-bottom: 15px;}
+}

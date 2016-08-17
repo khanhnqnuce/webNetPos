@@ -1,0 +1,84 @@
+﻿@model List<FDI.Simple.EventItem>
+<section id="mygird" class="vbox">
+    <section class="scrollable wrapper w-f">
+        <section class="panel panel-default">
+            <table class="gridView">
+                <thead>
+                    <tr>
+                        <th><a href="#CustomerID">Thông tin<span /></a></th>
+                        <th><a href="#CardNumber">Số lượng<span /></a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tổng số thẻ đã phát hành</td>
+                        <td>@Model.Count(u => u.EventCode == "00")</td>
+                    </tr>
+                    <tr>
+                        <td>Tổng số tiền đã nạp</td>
+                        <td>@string.Format("{0:0,0}", Model.Where(u => u.EventCode == "01").Sum(c => c.Value))</td>
+                    </tr>
+                    <tr>
+                        <td>Tổng số tiền đã rút</td>
+                        <td>@string.Format("{0:0,0}", - Model.Where(u => u.EventCode == "02").Sum(c => c.Value))</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <table class="gridView">
+                <thead>
+                    <tr>
+                        <th><a href="#Date">Thời gian<span /></a></th>
+                        <th><a href="#OwnerCode">Mã HS<span /></a></th>
+                        <th><a href="#CardNumber">Mã thẻ<span /></a></th>
+                        <th><a href="#Event">Loại giao dịch<span /></a></th>
+                        <th><a href="#Value">Số tiền<span /></a></th>
+                        <th><a href="#Balance">Số dư<span /></a></th>
+                        <th><a href="#Object">Đối tượng<span /></a></th>
+                        <th><a href="#Area">Khu vực<span /></a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Date.ToString("dd/MM/yyyy")</td>
+                            <td>@item.OwnerCode</td>
+                            <td>@item.CardNumber</td>
+                            <td>@item.Event</td>
+                            <td>@string.Format("{0:0,0}", item.Value < 0 ? (-item.Value):item.Value ))</td>
+                            <td>@string.Format("{0:0,0}", item.Balance)</td>
+                            <td>@item.Object</td>
+                            <td>@item.Area</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </section>
+    </section>
+    <footer class="footer bg-white b-t portlet">
+        <div class="row m-t-xs" id="rowpage">
+            <div class="bottom-pager">
+                <div class="left">
+                    <a href="#Page=1&Row=3" class="first" title="Trang đầu"></a>
+                    <a href="#Page=1&Row=3" class="pre" title="Trang trước"></a>
+                    <span>Trang</span>
+                    <input type="text" name="page" value="2">
+                    <input type="hidden" value="3">
+                    <span>/3</span>
+                    <a href="#Page=2&Row=3" class="next" title="Trang tiếp"></a>
+                    <a href="#Page=3&Row=3" class="last" title="Trang cuối"></a>
+                </div>
+                <div class="right">
+                    <span>Kết quả trên 1 trang:</span>
+                    <select name="RowPerPage">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="100" selected="">100</option>
+                    </select>
+                    <span>/ Tổng số: 225</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>

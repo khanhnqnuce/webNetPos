@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutNew.cshtml";
+}
+<section id="content">
+    <section class="vbox">
+
+        <header class="header bg-white b-b b-light">
+            <div class="col-sm-12 m">
+                <div class="col-xs-6">
+                    <strong>CỔNG THÔNG TIN ĐIỆN TỬ SỐ 1 VIỆT NAM</strong>
+                </div>
+                <div class="col-xs-6">
+                    <strong><span><small class="text-muted m-b pull-right clock"></small></span></strong>
+                </div>
+            </div>
+        </header>
+        <section class="scrollable wrapper ">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <section class="panel panel-default">
+                                <header class="panel-heading bg-danger lt no-border">
+                                    <div class="clearfix">
+                                        <a href="#" class="pull-left thumb">
+                                            <i class="fa fa-bell"></i>
+                                        </a>
+                                        <div class="clear">
+                                            <div class="h3  text-center m-t-xs m-b-xs text-white">
+                                                Thông báo
+                                                <i class="fa fa-circle text-white pull-right text-center text-xs m-t-sm"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="list-group no-radius alt">
+                                    <a class="list-group-item" href="#">
+                                        <span class="badge bg-success">0</span>
+                                        <i class="fa fa-envelope icon-muted"></i>
+                                        Contact
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="badge bg-info">0</span>
+                                        <i class="fa fa-bell icon-muted"></i>
+                                        Đăng ký nhận tin
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="badge bg-light">0</span>
+                                        <i class="fa fa-phone icon-muted fa-fw"></i>
+                                        Call
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                        <span class="badge bg-light">0</span>
+                                        <i class="fa fa-comments-o icon-muted fa-fw"></i>
+                                        Messages
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-sm-6">
+                            <section class="panel panel-default">
+                                <div class="text-center wrapper bg-light lt">
+                                    <div class="sparkline inline" data-type="pie" data-height="165" data-slice-colors="['#77c587','#41586e','#FFC333']">
+                                        20,30,50
+                                    </div>
+                                </div>
+                                <ul class="list-group no-radius">
+                                    <li class="list-group-item">
+                                        <span class="pull-right">45,000</span>
+                                        <span class="label bg-primary">1</span>
+                                        Điều kiện sử dụng dịch vụ
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="pull-right">23,200</span>
+                                        <span class="label bg-dark">2</span>
+                                        Chính sách bảo mật thông tin
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="pull-right">15,000</span>
+                                        <span class="label bg-warning">3</span>
+                                        Hình thức thanh toán
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <section class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="clearfix text-center m-t">
+                                <div class="inline">
+                                    <div class="easypiechart" data-percent="75" data-line-width="5" data-bar-color="#4cc0c1" data-track-color="#f5f5f5" data-scale-color="false" data-size="130" data-line-cap='butt' data-animate="1000">
+                                        <div class="thumb-lg">
+                                            <img src="~/Content/Admin/statistics.png" class="img-circle">
+                                        </div>
+                                    </div>
+                                    <div class="h4 m-t m-b-xs text-center">Thống kê</div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="panel-footer bg-info text-center">
+                            <div class="row pull-out">
+                                <div class="col-xs-4">
+                                    <div class="padder-v">
+                                        <span class="m-b-xs h3 block text-white">223</span>
+                                        <small class="text-muted">Bài viết</small>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 dk">
+                                    <div class="padder-v">
+                                        <span class="m-b-xs h3 block text-white">23</span>
+                                        <small class="text-muted">Gửi liên hệ</small>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="padder-v">
+                                        <span class="m-b-xs h3 block text-white">2,035</span>
+                                        <small class="text-muted">Tweets</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </section>
+    <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+</section>
+

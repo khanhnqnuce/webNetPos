@@ -1,0 +1,51 @@
+﻿<nav class="nav-primary hidden-xs">
+    <ul class="nav">
+        <li class='@(ViewBag.Check == 1 ? "active" : "")'>
+            <a href="#Card">
+                <i class="fa  fa-rss icon"><b class="bg-success"></b></i>
+                <span class="pull-right"><i class="fa fa-angle-down text"></i><i class="fa fa-angle-up text-active"></i></span>
+                <span>Quản lý thẻ</span>
+            </a>
+            <ul class="nav lt">
+                <li class="@(ViewBag.url == "Card" ? "active" : "")">
+                    <a href="/Admin/Card"><i class="fa fa-angle-right"></i><span>Danh sách thẻ</span></a>
+                </li>
+                <li class="@(ViewBag.url == "DuplicateCard" ? "active" : "")">
+                    <a href="/Admin/DuplicateCard"><i class="fa fa-angle-right"></i><span>Thẻ trùng nhau</span></a>
+                </li>
+                <li class="@(ViewBag.url == "BackList" ? "active" : "")">
+                    <a href="/Admin/BackList"><i class="fa fa-angle-right"></i><span>Danh sách đen</span></a>
+                </li>
+                <li class="@(ViewBag.url == "StatisticsCard" ? "active" : "")">
+                    <a href="/Admin/StatisticsCard"><i class="fa fa-angle-right"></i><span>Thống kê thẻ</span></a>
+                </li>
+            </ul>
+        </li>
+        <li class='@(ViewBag.Check == 2 ? "active" : "")'>
+            <a href="#Card">
+                <i class="fa  fa-rss icon"><b class="bg-success"></b></i>
+                <span class="pull-right"><i class="fa fa-angle-down text"></i><i class="fa fa-angle-up text-active"></i></span>
+                <span>Quản lý doanh thu</span>
+            </a>
+            <ul class="nav lt">
+                <li class="@(ViewBag.url == "RevenueCard" ? "active" : "")">
+                    <a href="/Admin/RevenueCard"><i class="fa fa-angle-right"></i><span>Nạp tiền/rút tiền</span></a>
+                </li>
+                <li class="@(ViewBag.url == "Sales" ? "active" : "")">
+                    <a href="/Admin/Sales"><i class="fa fa-angle-right"></i><span>Doanh thu bán hàng</span></a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#Card">
+                <i class="fa  fa-rss icon"><b class="bg-success"></b></i>
+                <span class="pull-right"><i class="fa fa-angle-down text"></i><i class="fa fa-angle-up text-active"></i></span>
+                <span>Theo dõi doanh thu</span>
+            </a>
+            <ul class="nav lt">
+                <li><a href="/"><i class="fa fa-angle-right"></i><span>Doanh thu nạp thẻ/rút tiền</span></a></li>
+                <li><a href="/"><i class="fa fa-angle-right"></i><span>Doanh thu bán hàng</span></a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>

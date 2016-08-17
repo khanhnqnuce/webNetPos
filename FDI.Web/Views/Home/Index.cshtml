@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+    $(function () {
+        $(".fieldSearchDate").datepicker({
+            showOn: "button",
+            buttonImageOnly: true,
+            format: 'dd/mm/yyyy'
+        }).mask('00/00/0000');
+    })
+</script>
+<div class="wrapper">
+    <!-- Sidebar Constructor -->
+    <div class="constructor">
+        <!-- Header side bar -->
+        <div id="wrapper-main">
+            <header id="header-main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="account-right">
+                                <ul class="sub-account">
+                                    <li>
+                                        <a href="#" title=""><span class="fa fa-bars"></span>Quản lý Tài khoản</a>
+                                        <ul>
+                                            <li><a href="/"><span class="fa fa-home"></span>Trang chủ</a></li>
+                                            <li><a href="/doi-mat-khau"><span class="fa fa-lock"></span>Đổi mật khẩu</a></li>
+                                            <li><a href="/Login/ProcessLogout"><span class="fa fa-sign-out"></span>Thoát</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="container">
+                <div id="content-main">
+                    <!--Open Body Popup logres -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.Action("Infomation", "Home")
+                        </div>
+                        <div class="col-md-9 no-pd-l">
+                            <div class="content-right">
+                                <div class="box-content">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Nhập mã thẻ">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <input type="text" name="fromDate" class="fieldSearchDate form-control" placeholder="Từ ngày" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <input type="text" name="toDate" class="fieldSearchDate form-control" placeholder="Tới ngày" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1">
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-sm btn-primary">Tìm kiếm</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <b style="margin-bottom: 15px;">Chi tiết giao dịch trừ tiền</b>
+                                </div>
+                            </div>
+                            <table class="gridView table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" style="width: 5%">STT</th>
+                                        <th class="text-center">Thời gian</th>
+                                        <th class="text-center">Tên giao dịch</th>
+                                        <th class="text-center">Số tiền</th>
+                                        <th class="text-center">Số dư</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#" id="scrollTop"><span class="fa fa-angle-up"></span></a>

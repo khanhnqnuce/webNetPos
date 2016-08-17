@@ -1,0 +1,113 @@
+﻿@model FDI.Simple.ModelCustomerTypeItem
+@{
+    ViewBag.Title = "Quản lý khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutNew.cshtml";
+}
+<script type="text/javascript">
+    urlLists = '@Url.Action("ListItems", "Customer")';
+    urlForm = '@Url.Action("AjaxForm", "Customer")';
+    urlPostAction = '@Url.Action("Actions", "Customer")';
+    urlView = '@Url.Action("AjaxView", "Customer")';
+    urlHistory = '@Url.Action("AjaxHistory", "Customer")';
+    @*urlEditPoint = '@Url.Action("AjaxForm", "CustomerPoint")';*@
+    formWidth = 960;
+    formHeight = $(window).height() - 24;
+    viewWidth = 960;
+    viewHeight = $(window).height() - 24;
+
+    $(document).ready(function () {
+        initAjaxLoad(urlLists, "#NewsGriditems");
+
+        $("#gridSearch").submit(function () {
+            var form = $("#gridSearch");
+            window.location.href = '#' + getValueFormMutilSelect(form);
+            return false;
+        });
+
+        $("#btn_add").click(function () {
+            $("#dialog-form").dialog(
+                {
+                    title: "Thêm mới khách hàng",
+                    width: formWidth,
+                    height: formHeight
+                }
+            ).load(encodeURI(urlForm + "?do=Add")).dialog("open");
+            return false;
+        });
+
+        $(".fieldSearchDate").datepicker({
+            showOn: "button",
+            buttonImageOnly: true
+        }).mask('00/00/0000');
+
+        $("select.mutil").multiSelect({ oneOrMoreSelected: '*', selectAllText: '<b>Tất cả</b>', optGroupSelectable: true });
+    });
+</script>
+<section id="content">
+    <section class="hbox stretch">
+        <aside>
+            <section class="vbox">
+                <header class="header bg-white b-b clearfix">
+                    <ul class="breadcrumb no-border no-radius b-b b-light m-l-15x m-r-15x">
+                        <li><a href="/Admin/Admin"><i class="fa fa-home"></i>Home</a></li>
+                        <li class="active">Quản lý bài viết </li>
+                    </ul>
+                    <div class="row m-t-sm">
+                        <div class="col-sm-11 m-b-xs">
+                            <form id="gridSearch" class="form-inline" role="form">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-default" title="Filter" data-toggle="dropdown"><span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#showAll" data-event="showAll" data-grid="#mygird"><i class="fa fa-check icon-muted fa-fw"></i>Kích hoạt</a></li>
+                                        <li><a href="#hideAll" data-event="hideAll" data-grid="#mygird"><i class="fa fa-times icon-muted fa-fw"></i>Khóa</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#deleteAll" data-event="deleteAll" data-grid="#mygird"><i class="fa fa-trash-o icon-muted fa-fw"></i><span class="text">Xóa</span></a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="sr-only" for="Keyword">Từ khóa tìm kiếm</label>
+                                    <input type="text" class="form-control input-sm" id="Keyword" name="Keyword" placeholder="Từ khóa tìm kiếm">
+                                </div>
+                                <div class="form-group">
+                                    <select name="SearchIn" id="SearchIn" class="form-control input-sm mutil">
+                                        <option value="ID">ID</option>
+                                        <option value="Fullname">Tên khách hàng</option>
+                                        <option value="UserName">Tên đăng nhập</option>
+                                        <option value="Email">Email</option>
+                                        <option value="Mobile">Số điện thoại</option>
+                                        <option value="BillingAddress">Địa chỉ thanh toán</option>
+                                        <option value="ShippingAddress">Địa chỉ chuyển hàng</option>
+                                        <option value="LastIpAddress">IP truy cập</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    @Html.DropDownList("typeCustomer", new SelectList(Model.ListItem, "ID", "Name"), "Tất cả", new { @class = "form-control" })
+                                </div>
+
+                                <div class="form-group">
+                                    <select name="IsActive" id="IsActive" class="form-control">
+                                        <option value="-1">Trạng thái</option>
+                                        <option value="0">Khóa</option>
+                                        <option value="1">Kích hoạt</option>
+                                    </select>
+                                </div>
+
+                                <button name="submit.Search" type="submit" class="btn btn-sm btn-primary">Tìm kiếm</button>
+                            </form>
+                        </div>
+                        <div class="col-sm-1 m-b-xs">
+                            @if (Model.SystemActionItem.Add)
+                            {
+                                @Html.ActionLink("Thêm mới", "Actions", new { }, new { @class = "btn btn-sm btn-primary", @id = "btn_add" })
+                            }
+                        </div>
+                    </div>
+                </header>
+                <section id="NewsGriditems" class="m-t-lg">
+                </section>
+            </section>
+        </aside>
+    </section>
+    <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+</section>

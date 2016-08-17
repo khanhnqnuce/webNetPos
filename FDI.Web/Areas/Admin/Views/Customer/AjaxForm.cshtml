@@ -1,0 +1,182 @@
+﻿@model FDI.Base.Customer
+
+@{
+    ViewBag.Title = ViewBag.ActionText + " Khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Ajax.cshtml";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        registerGalleryByModule();
+        
+        // datepicker
+        $(".datepicker-input").each(function () { $(this).datepicker(); });
+        
+        $(".datepicker-input").click(function () {
+            $(".datepicker-days .day").click(function () {
+                $('.datepicker').hide();
+            });
+        });
+        
+        $("#CustomerForm").validate({
+            rules: {
+                FirstName:
+                {
+                    required: true,
+                    maxlength: 255
+                },
+                LastName:
+                {
+                    required: true,
+                    maxlength: 255
+                },
+               
+                UserName:
+                {
+                    required: true,
+                    minlength: 4,
+                    maxlength: 255,
+                    remote: "@Url.Action("CheckByUserName", "Customer", new { customer = Model.ID })"
+                },
+               
+            },
+            messages: {
+                FirstName: "Bạn cần nhập họ",
+                LastName: "Bạn cần nhập tên",
+                UserName: {
+                    required:"Bạn cần nhập tên đăng nhập",
+                    remote:"Tên đăng nhập đã được sử dụng"
+                },
+              
+            },
+            submitHandler: function () { //onSubmit
+                $.post(urlPostAction, $("#CustomerForm").serialize(), function (data) {
+                    if (data.Erros)
+                        createMessage("Đã có lỗi xảy ra", data.Message); // Tạo thông báo lỗi
+                    else {
+                        $("#dialog-form").dialog('close');
+                        var linkFW = '#Page=' + getParameters("Page", 1) + '&RowPerPage=' + getParameters("RowPerPage", 10);
+                        createCloseMessage("Thông báo", data.Message, linkFW + '&itemId=' + data.ID + '&message=' + data.Message + '&temp=' + Math.floor(Math.random() * 11) + '');}
+                });
+                return false;
+            }
+        });
+        
+        $("#@Html.IdFor(model => model.Birthday), #@Html.IdFor(model => model.CreatedOnUtc), #@Html.IdFor(model => model.LastActivityDateUtc), #@Html.IdFor(model => model.LastLoginDateUtc)").datepicker({
+            showOn: "button",
+            buttonImageOnly: true
+        }).mask('00/00/0000');
+
+        $("#@Html.IdFor(model => model.LastIpAddress)").mask('099.099.099.099');
+
+        $("#close").click(function () {
+            $("#dialog-form").html("").dialog('close');
+        });
+
+        $("#@Html.IdFor(model => model.CityID)").change(function() {
+            var cityId = $(this).val();
+            $.post( "@(Url.Action("getDistrictByCity", "SystemDistrict"))", {"cityId": cityId}, function( data ) {
+                $("#@Html.IdFor(model => model.DistrictID)").html("");
+                $.each( data.list, function( i, val ) {
+                    $("#@Html.IdFor(model => model.DistrictID)").append("<option value='"+val.ID+"'>"+val.Name+"</option>");
+                });
+            });
+        });
+   
+    });
+</script>
+
+<form id="CustomerForm">
+    <input type="hidden" name="do" id="do" value="@ViewBag.Action"/>
+    <input type="hidden" name="ItemID" id="ItemID" value="@Model.ID"/>
+    <div class="col-sm-12">
+        <section class="panel panel-default">
+            <header class="panel-heading font-bold">Thông tin khách hàng</header>
+            <div class="panel-body">
+                <div class="bs-example form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">@Resources.CSResourceString.Customer_FirstName</label>
+                        <div class="col-lg-10">
+                            @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">@Resources.CSResourceString.Customer_LastName</label>
+                        <div class="col-lg-10">
+                            @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">@Resources.CSResourceString.Customer_UserName</label>
+                        <div class="col-lg-10">
+                               @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">@Resources.CSResourceString.Customer_Email</label>
+                        <div class="col-lg-10">
+                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">@Resources.CSResourceString.Customer_Gender</label>
+                        <div class="col-lg-10">
+                            @Html.RadioButtonFor(model => model.Gender, true)
+                            Nam
+                            @Html.RadioButtonFor(model => model.Gender, false)
+                            Nữ
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">@Resources.CSResourceString.Customer_BirthDay</label>
+                        <div class="col-lg-10">
+                               <input class="input-sm input-s datepicker-input form-control" id="Birthday_" name="Birthday_" size="16" type="text" value="@(Model.Birthday.HasValue ? Model.Birthday.Value.ToString("dd/MM/yyyy") : DateTime.Now.ToString("dd/MM/yyyy"))" data-date-format="dd/mm/yyyy" >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">@Resources.CSResourceString.Customer_Mobile</label>
+                        <div class="col-lg-10">
+                            @Html.TextBoxFor(model => model.Mobile, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                            <div class="checkbox col-md-6">
+                                <label>
+                                    @Html.CheckBox("IsActive") Kích hoạt
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div style="display: none;">
+        <button id="btnSave" type="submit" class="btn btn-sm btn-primary">@ViewBag.ActionText</button>
+        <button id="btnReset" type="reset" name="reset" class="btn btn-sm btn-primary">Nhập lại</button>
+        <button id="close" type="button" class="btn btn-sm btn-primary">Đóng lại</button>
+    </div>
+    
+
+</form>
+
+
+
+<script type="text/javascript">
+    $("#resetpass").click(function() {
+        
+        var customerid = @Model.ID;
+        var link = "/Admin/Customer/ResetPassword";
+        $.post(link, {"id":customerid
+        }, function(data) {
+            createMessage("Thông báo", data.Message);
+        });
+    });
+</script>

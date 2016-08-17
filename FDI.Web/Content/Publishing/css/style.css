@@ -1,0 +1,119 @@
+﻿
+/*Popup Tabs Login  Register*/
+
+#header-main { background: #0e76bc;}
+.content-left { width: 100%;float: left;}
+.content-left h2 { background:url(../img/ico-user.png) no-repeat left top #0F75BC;padding: 10px 10px;color: #fff;font-size: 16px;margin-top: 25px;margin-bottom: 0;float: left;width: 100%; padding-left: 44px}
+.content-left h3 {background: #e6f5ff;padding: 10px 10px;color: #0e76bc;font-size: 16px;margin-top: 0;margin-bottom: 0;float: left;width: 100%;font-weight: normal;border: 1px solid #acd0e8;}
+.box-content-left { border-left: 1px solid #dcdcdc;float: left;width: 100%;border-right: 1px solid #dcdcdc;border-bottom: 1px solid #dcdcdc;padding: 8px;margin-bottom: 15px;}
+.profile-account { width: 100%;float: left; }
+.account-avartar { width: 100%;float: left;width: 100px;height: 100px;border: 1px solid #dcdcdc;padding: 5px;text-align: center;line-height: 90px;text-align: center;}
+.account-avartar img { max-height: 90px;max-width: 90px;display: inline-block;vertical-align: middle;}
+.account-detail { width: calc(100% - 100px);padding-left: 10px;float: right;padding-top: 10px;}
+.account-detail a { display: block;font-weight: normal;text-transform: uppercase;}
+.account-detail a:hover {text-decoration: underline}
+.account-detail span { display: block;font-weight: normal;padding-top: 2px;}
+.box-menu-left { width: 100%;float: left;background: #ffffff;}
+.box-menu-left ul { border: 1px solid #e1e1e1;border-top: 0;/* padding-left: 21px; */}
+.box-menu-left li { display: block; border-bottom: 1px dashed #e5e5e5;padding-left: 20px;}
+.box-menu-left li:last-child { border-bottom: none;}
+.box-menu-left li a { display: block;padding: 8px 10px;color: #707070;font-weight: normal;}
+.box-menu-left li a:hover {color: #0e76bc;}
+.menu-aside { width: 100%;float: left;}
+.content-right { width: 100%;float: left;margin-top: 25px;}
+/*Link call Log Res mobie*/
+
+.login-res-mobie { border-bottom: 1px solid #cccccc;float: left;padding: 10px;width: 100%;}
+.login-res-mobie a { color: #000;background: #ccc;border-radius: 3px;padding: 5px 10px;float: left;display: block;margin-right: 10px;}
+.login-res-mobie a span { color: #000;padding-right: 4px;font-size: 16px;}
+
+.account-mobie { width: 100%;float: left;border-bottom: 1px solid #ccc;}
+.account-mobie ul { margin-bottom: 0;}
+.account-mobie span { padding-right: 7px;}
+.account-mobie a.btn-logout-mobie {color: #000;background: #ccc;border-radius: 3px;padding: 5px 10px;float: left;display: block;margin-right: 10px;margin-left: 10px;margin-top: 10px;margin-right: 10px;margin-bottom: 10px;}
+.account-mobie a.btn-logout-mobie span { color: #000;padding-right: 4px;font-size: 16px;}
+
+.logo-login img { max-height: 80px;}
+.login-header { border-bottom: 3px solid #0f75bc;}
+.login-content { height: calc(100%);float: left;width: 100%;display: table;position: absolute;text-align: center;background: url(../images/bg-login.jpg) center center no-repeat;background-size: cover;}
+.login-footer { background: #0f75bc;padding: 10px 0;margin-top: 15px;position: fixed;bottom: 0;width: 100%;}
+
+.box-content { text-align: left;float: left;width: 100%;border-radius: 8px;}
+.box-content  b { color: #0e76bc;font-weight: bold;font-size: 18px;font-weight: bold;width: 100%;display: block;background: #e6f5ff;border: 1px solid #acd0e8;padding: 5px 10px;  }
+.box-content h4 { color: #dc143c;font-weight: bold;margin-bottom: 0;}
+.box-content .error  { font-size: 13px;color: red;padding-top: 3px;display: block;font-style: italic;}
+.form-logres-sty { width: 100%;padding: 20px 0;}
+.form-logres-sty i { font-size: 16px;}
+.form-logres-sty .control-label { color: #353535;font-weight: normal;text-align: left;width: 100%;font-weight: bold;}
+.form-logres-sty .form-control { border-radius: 2px;}
+.form-logres-sty .control-label strong { padding: 3px 0;color: red;}
+.form-logres-sty .btn-submit { padding: 7px 14px;background: #70bf44;border: 2px solid #70bf44;border-radius: 4px;color: #fff;text-transform: uppercase;color: #fff;font-weight: bold;margin-top: 15px;float: left;}
+.form-logres-sty .btn-submit span { font-size: 18px;padding-right: 10px;}
+.form-logres-sty .btn-submit:hover { color: #004884;background: #fff;border: 2px solid #0e76bc;}
+.form-logres-sty input[type='checkbox'] { width: 18px;height: 18px;margin-right: 5px;position: relative;top: 4px;}
+
+.form-index-sty { border: 1px solid #ebebeb;border-top: 0;padding: 15px;}
+.form-index-sty label { font-weight: bold;font-size: 13px;}
+.form-index-sty .input-group { width: 100%;}
+.form-index-sty input { box-shadow: none;}
+.form-index-sty .btn-submit { padding: 5px 14px;background: #70bf44;border: 2px solid #70bf44;border-radius: 0px;color: #fff;text-transform: uppercase;color: #fff;font-weight: bold;margin-top: 15px;float: right;transition: ease 0.3s;}
+.form-index-sty .btn-submit span { font-size: 18px;padding-right: 10px;}
+.form-index-sty .btn-submit:hover { color: #004884;background: #fff;border: 2px solid #0e76bc;transition: ease 0.3s;}
+
+.box-log-res { text-align: left;padding: 20px;background: rgba(15, 117, 188, 0.3);float: left;width: 100%;margin-top: 20px;border-radius: 8px;}
+.box-log-res  b { color: #0f75bc;text-transform: uppercase;font-weight: bold;font-size: 24px;font-weight: bold;width: 100%;display: block;}
+.box-log-res .input-group { width: 100%;}
+.box-log-res h4 { color: #dc143c;font-weight: bold;margin-bottom: 0;}
+.box-log-res label { color: #dc143c;    font-weight: normal;margin-bottom: 0;}
+.box-log-res .error  { font-size: 13px;color: red;padding-top: 3px;display: block;font-style: italic;}
+.form-logres-sty { width: 100%;padding: 10px 0;}
+.form-logres-sty i { font-size: 16px;}
+.form-logres-sty .control-label { color: #353535;font-weight: normal;text-align: left;width: 100%;font-weight: bold;}
+.form-logres-sty .form-control { border-radius: 2px;}
+.form-logres-sty .control-label strong { padding: 3px 0;color: red;}
+.form-logres-sty .btn-submit { padding: 7px 14px;background: #70bf44;border: 2px solid #70bf44;border-radius: 4px;color: #fff;text-transform: uppercase;color: #fff;font-weight: bold;margin-top: 15px;float: left;}
+.form-logres-sty .btn-submit span { font-size: 18px;padding-right: 10px;}
+.form-logres-sty .btn-submit:hover { color: #004884;background: #fff;border: 2px solid #0e76bc;}
+.form-logres-sty input[type='checkbox'] { width: 18px;height: 18px;margin-right: 5px;position: relative;top: 4px;}
+
+.login-other { width: 100%;float: left;margin-top:10px;}
+.login-other a { font-style: italic;}
+.login-other a:hover { color: #0f75bc;text-decoration: underline;}
+.login-other li { display: inline-block;}
+.login-other li:first-child { padding-right: 10px;  }
+.login-other li:first-child:after { content: "|";padding-left: 10px;color: #0f75bc;}
+
+.logo { padding: 10px 0;}
+
+#changepass-form { width: 460px;height: 400px;}
+.popup-logres { background: #003a6a;border: 5px solid #fff;margin: 0px auto;padding: 20px;position: relative;}
+.popup-logres b { color: #fff;text-transform: uppercase;font-weight: bold;border-bottom: 1px solid #004884;padding: 5px 0 10px;font-size: 27px;font-weight: bold;width: 100%;display: block;}
+.popup-logres  .mfp-close { color: #fff !important;}
+.popup-logres .error  { font-size: 13px;color: red;padding-top: 3px;display: block;font-style: italic;}
+.form-logres-sty2 { width: 100%;padding: 20px 0;}
+.form-logres-sty2 .control-label { color: #ffffff;font-weight: normal;}
+.form-logres-sty2 .form-control { border-radius: 2px;}
+.form-logres-sty2 .control-label strong { padding: 3px 0;color: red;}
+.form-logres-sty2 .btn-submit { padding: 5px 14px;background: #004884;border: 2px solid #004884;border-radius: 3px;color: #fff;text-transform: uppercase;color: #fff;font-weight: bold;margin-top: 15px;float: right;}
+.form-logres-sty2 .btn-submit:hover { color: #004884;background: #fff;border: 2px solid #0e76bc;}
+#validate-status {
+    color: #dc143c;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-type-1 { margin-bottom: 15px !important;}
+.form-type-1 select { width: 100% !important;}
+.form-type-1 label { line-height: 34px;}
+.button-doi a:focus { background: red;}
+
+.filetree span.folder.hover .quickTool { display: block;}
+.filetree span.folder:hover .quickTool { display: block;}
+
+.div-phantrang {padding-left: 0;margin-top: 20px;padding: 0;width: 100%;float: left;padding: 0px;text-align: left;}
+.dot-fillin ul { float: left;}
+.dot-fillin ul li { float: left;display: inline-block;}
+.dot-fillin ul li.current a  { color: #fff;background: #449d44;}
+.dot-fillin ul li:hover a { background: #d1d1d1;}
+.dot-fillin ul li a { border: 1px solid #449d44;text-align: center;margin-right: 5px;width: 28px;height: 28px;display: block;line-height: 26px;color: #4a4a4a;font-weight: bold;overflow: hidden;}
+.dot-fillin ul li span i { padding-right: 0;font-size: 22px;}

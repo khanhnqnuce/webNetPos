@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Đăng nhập";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAnonymous.cshtml";
+}
+<style type="text/css">
+    .panel-heading {
+        padding: 5px 15px;
+    }
+
+    .panel-footer {
+        padding: 1px 15px;
+        color: #A0A0A0;
+    }
+
+    .profile-img {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 10px;
+        display: block;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+
+    .circle-mask {
+        display: block;
+        height: 96px;
+        width: 96px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 100;
+        margin-bottom: 10px;
+        background-size: 96px;
+        background-repeat: no-repeat;
+        background-image: url(/Images/avatar_2x.png);
+        -webkit-transition: opacity 0.075s;
+        -moz-transition: opacity 0.075s;
+        -ms-transition: opacity 0.075s;
+        -o-transition: opacity 0.075s;
+        transition: opacity 0.075s;
+    }
+</style>
+<div class="container" style="margin-top: 40px">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Sign in to continue</strong>
+                </div>
+                <div class="panel-body">
+                    <form role="form" action="@Url.Action("ProcessLogin","User")" method="POST">
+                        <fieldset>
+                            <div class="circle-mask" style="">
+                                <canvas id="canvas" class="circle" width="96" height="96"></canvas>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10  col-md-offset-1 ">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-user"></i>
+                                            </span>
+                                            <input class="form-control" placeholder="Username" name="Username" type="text" autofocus>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-key"></i>
+                                            </span>
+                                            <input class="form-control" placeholder="Password" name="Password" type="password" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-lg btn-info btn-block" value="Đăng nhập">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/Content/Publishing/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta http-equiv="content-language" content="vi" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="mô tả" />
+    <meta name="keywords" content="từ khóa" />
+    <meta name="robots" content="noodp,index,follow" />
+    <meta name='revisit-after' content='1 days' />
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="" />
+    <!-- Check browser not display in ie 9  -->
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0; url=detect.html" />
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	window.top.location = 'detect.html';
+	/* ]]> */
+	</script>
+    <![endif]-->
+    <!-- Check browser not display in ie 9 -->
+    <!--Open CSS -->
+    <link href="/Content/Publishing/css/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/Publishing/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Content/Publishing/css/magnific-popup.css" rel="stylesheet" />
+    <link href="/Content/Publishing/css/common.css" rel="stylesheet" />
+    <link href="/Content/Publishing/css/style.css" rel="stylesheet" />
+    <link href="/Content/Publishing/css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Skin/js/datepicker/datepicker.css" type="text/css" />
+    @*<link rel="stylesheet" href="/Skin/css/app.css" type="text/css" />*@
+    @*<link href="/Content/Admin/css/gridview.css" rel="stylesheet" type="text/css" />*@
+
+    <!--End CSS -->
+    <!--Open JavaScript Top -->
+    <script src="/Content/Publishing/js/jquery-1.11.0.min.js"></script>
+    <script src="/Content/Publishing/js/respond.min.js"></script>
+    <script src="/Content/Publishing/js/modernizr.js"></script>
+    <!--End JavaScript Top -->
+    <!--[if lt IE 9]>
+        <script src="/Content/Publishing/js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script type="text/javascript" src="/Content/Publishing/js/selectivizr-min.js"></script>
+      <noscript><link rel="stylesheet" href="/Content/Publishing/css/style.css" /></noscript>
+    <![endif]-->
+</head>
+<body>
+    <!-- Material sidebar -->
+    @RenderBody()
+    @*@Html.Partial("~/Views/Home/Popup.cshtml")*@
+    <!--Open JavaScript Bot -->
+    <script src="/Content/Publishing/js/bootstrap.min.js"></script>
+    <script src="/Content/Publishing/js/jquery.magnific.min.js"></script>
+    @*<script src="/Content/Publishing/js/script.js"></script>*@
+    <script src="/Content/Admin/js/jquery.mask.js"></script>
+    <script src="/Skin/js/datepicker/bootstrap-datepicker.js"></script>
+    <!--End JavaScript Bot -->
+</body>
+</html>

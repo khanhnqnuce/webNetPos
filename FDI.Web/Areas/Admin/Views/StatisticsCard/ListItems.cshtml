@@ -1,0 +1,68 @@
+﻿@model FDI.Simple.ModelCardItem
+<section id="mygird" class="vbox">
+    <section class="scrollable wrapper w-f">
+        <section class="panel panel-default">
+            <table class="gridView">
+                <thead>
+                    <tr>
+                        <th><a href="#CustomerID">Loại thẻ<span /></a></th>
+                        <th><a href="#CardNumber">Tổng số thẻ<span /></a></th>
+                        <th><a href="#CustomerName">Tổng số thẻ đã phát hành - T<span /></a></th>
+                        <th><a href="#Balance">Tổng số thẻ còn lại- R<span /></a></th>
+                        <th><a href="#Balance">Tổng số thẻ đã khóa<span /></a></th>
+                        <th><a href="#CardType">Số dư tài khoản<span /></a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.LsThongKeTheItems)
+                    {
+                        <tr>
+                            <td>@item.NameType</td>
+                            <td>@item.TotalCard</td>
+                            <td>@item.TotalUsed</td>
+                            <td>@item.TotalNotUsed</td>
+                            <td>@item.TotalBlock</td>
+                            <td class="text-right">@string.Format("{0:0,0}",item.TotalBalance)</td>
+                        </tr>
+                    }
+                    <tr style="font-weight: bold">
+                        <td>Tổng</td>
+                        <td>@Model.LsThongKeTheItems.Sum(c => c.TotalCard)</td>
+                        <td>@Model.LsThongKeTheItems.Sum(c => c.TotalUsed)</td>
+                        <td>@Model.LsThongKeTheItems.Sum(c => c.TotalNotUsed)</td>
+                        <td >@Model.LsThongKeTheItems.Sum(c => c.TotalBlock)</td>
+                        <td class="text-right">@string.Format("{0:0,0}",Model.LsThongKeTheItems.Sum(c => c.TotalBalance))</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <table class="gridView">
+                <thead>
+                    <tr>
+                        <th><a href="#CustomerID">Mã KH<span /></a></th>
+                        <th><a href="#CardNumber">Số thẻ<span /></a></th>
+                        <th><a href="#CustomerName">Tên tài khoản<span /></a></th>
+                        <th><a href="#Balance">Số dư<span /></a></th>
+                        <th><a href="#CardType">Loại thẻ<span /></a></th>
+                        <th><a href="#CardStatus">Trạng thái<span /></a></th>
+                        <th><a href="#DateIssue">Ngày phát hành<span /></a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.LstCardItems)
+                    {
+                        <tr>
+                            <td>@item.CustomerID</td>
+                            <td>@item.CardNumber</td>
+                            <td>@item.CustomerName</td>
+                            <td class="text-right">@string.Format("{0:0,0}", item.Balance)</td>
+                            <td>@item.CardType</td>
+                            <td>@item.CardStatus</td>
+                            <td>@item.DateIssue</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </section>
+    </section>
+</section>

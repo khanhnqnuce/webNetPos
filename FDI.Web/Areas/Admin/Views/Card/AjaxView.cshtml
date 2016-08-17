@@ -1,0 +1,108 @@
+﻿@model FDI.Simple.ModelCustomerItem
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Ajax.cshtml";
+}
+@*<link rel="stylesheet" href="/Skin/js/datepicker/datepicker.css" type="text/css" />
+<script src="/Skin/js/datepicker/bootstrap-datepicker.js"></script>*@
+<script>
+    $(function () {
+        $(".fieldSearchDate").datepicker({
+            showOn: "button",
+            buttonImageOnly: true,
+            format: 'dd/mm/yyyy'
+        }).mask('00/00/0000');
+
+        $("#search-card").click(function () {
+            $.post("/Admin/Card/GetGiaoDich", { card: "@Model.CustomerItem.CardNumber", fromdate: $("#fromDate").val(), todate: $("#toDate").val() }, function (data) {
+                $("#detail-card tbody").html(data);
+            });
+        });
+    })
+</script>
+<style>
+    .dropdown-menu {
+        z-index: 10000;
+    }
+</style>
+<div class="col-sm-12 m-t-sm">
+    <section class="panel panel-default">
+        <table class="table table-bordered">
+            <tr>
+                <td style="width: 20%">Mã khách hàng:</td>
+                <td>@Model.CustomerItem.CustomerID</td>
+                <td style="width: 20%">Mã thẻ:</td>
+                <td>@Model.CustomerItem.CardNumber</td>
+            </tr>
+            <tr>
+                <td>Tên khách hàng:</td>
+                <td>@Model.CustomerItem.CustomerName</td>
+                <td>Số dư:</td>
+                <td>@string.Format("{0:0,0}", Model.CustomerItem.Balance)</td>
+            </tr>
+            <tr>
+                <td>Ngày sinh:</td>
+                <td>@Model.CustomerItem.BirthDate</td>
+                <td>Loại thẻ:</td>
+                <td>@Model.CustomerItem.CardType</td>
+            </tr>
+            <tr>
+                <td>Năm học:</td>
+                <td>@Model.CustomerItem.SchoolYear</td>
+                <td>Trạng thái:</td>
+                @switch (Model.CustomerItem.CardStatus)
+                {
+                    case "00":<td>Chưa phát hành</td>break;
+                    case "01":<td>Đã phát hành</td>break;
+                    default:<td>Đã khóa</td>break;
+                }
+            </tr>
+            <tr>
+                <td>Lớp:</td>
+                <td>@Model.CustomerItem.CustomerClass</td>
+                <td>Ngày phát hành:</td>
+                <td>@Model.CustomerItem.DateIssue.ToString("dd/MM/yyyy HH:mm")</td>
+            </tr>
+        </table>
+    </section>
+    <section class="panel panel-default">
+        <header class="panel-heading" style="height: 48px">
+            <div class="col-md-12">
+                <div class="col-md-2">
+                    <label class="font-bold" style="padding-top: 7px;">Chi tiết giao dịch</label>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" name="fromDate" id="fromDate" class="fieldSearchDate form-control input-sm" placeholder="Từ ngày" value="@(new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1))"/>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" name="toDate" id="toDate" class="fieldSearchDate form-control input-sm" placeholder="Tới ngày" value="@(new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day))"/>
+                </div>
+                <div class="col-md-1">
+                    <a class="btn btn-sm btn-primary" id="search-card">Tìm kiếm</a>
+                </div>
+            </div>
+        </header>
+        <table class="table table-bordered" id="detail-card">
+            <thead>
+                <tr>
+                    <th>Thời gian</th>
+                    <th>Miêu tả</th>
+                    <th>Số tiền</th>
+                    <th>Số dư</th>
+                    <th>Đối tượng</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.LsGiaoDichItems)
+                {
+                    <tr>
+                        <td>@item.Date.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>@item.Event</td>
+                        <td>@string.Format("{0:0,0}", item.Value)</td>
+                        <td>@string.Format("{0:0,0}", item.Balance)</td>
+                        <td>@item.Object</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+</div>

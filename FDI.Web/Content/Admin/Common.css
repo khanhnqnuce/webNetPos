@@ -1,0 +1,66 @@
+a {
+    cursor: pointer;
+}
+
+legend {
+    border: 1px solid #e5e5e5;
+}
+
+
+.bg-blue {
+    background-color: #00859D!important;
+}
+
+.bg-blue .nav > li > a:hover, .bg-blue .nav > li > a:focus {
+    color: #fff;
+    background-color: #3fb4b5;
+}
+.dropdown > a:hover{
+    color: #fff;
+    background-color: #3fb4b5;
+}
+.bg-dark.dk, .bg-dark .dk {
+    background-color: #00859D !important
+}
+.bg-blue.dk, .bg-blue .dk {
+    background-color: #3fb4b5 !important;
+}
+
+.bg-blue.dker, .bg-blue .dker {
+    background-color: #38a1a2;
+}
+
+.bg-blue .nav > li > a {
+    color: #ffffff;
+}
+
+#form-modal {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+/*showLoading*/
+.loading-indicator {
+    height: 80px;
+    width: 80px;
+    background: url( '/Scripts/showLoading/images/ajax-loader-metro-green.gif' );
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.loading-indicator-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    filter: alpha(opacity = 60);
+}
+
+.hideOverflow {
+    overflow: hidden;   
+}
+/*End showLoading*/
+
+.fieldSearchDate {
+    background-image: url("/Skin/images/datepicker.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    width: 100px !important;
+}

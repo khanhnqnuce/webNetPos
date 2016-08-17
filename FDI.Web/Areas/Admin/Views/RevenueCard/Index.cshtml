@@ -1,0 +1,108 @@
+﻿@model FDI.Simple.ModelBuidingItem
+@{
+    ViewBag.Title = "Quản lý thẻ";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutNew.cshtml";
+}
+<script type="text/javascript">
+    urlLists = '@Url.Action("ListItems", "RevenueCard")';
+    formWidth = 960;
+    formHeight = $(window).height() - 24;
+    viewWidth = 960;
+    viewHeight = $(window).height() - 24;
+
+    $(document).ready(function () {
+        initAjaxLoad(urlLists, "#Griditems");
+
+        $("#gridSearch").submit(function () {
+            var form = $("#gridSearch");
+            window.location.href = '#' + getValueFormMutilSelect(form);
+            return false;
+        });
+
+        $(".fieldSearchDate").datepicker({
+            showOn: "button",
+            buttonImageOnly: true,
+            format: 'dd/mm/yyyy'
+        }).mask('00/00/0000');
+
+        $("#BuidingCode").change(function () {
+            var code = $(this).val();
+            $.post("@(Url.Action("GetArea", "StatisticsCard"))", { "code": code }, function (data) {
+                $("#AreaCode").html("<option value=''>- Chọn khu vực -</option>");
+                $.each(data.list, function (i, val) {
+                    $("#AreaCode").append("<option value='" + val.Code + "'>" + val.Desc + "</option>");
+                });
+            });
+        });
+        $("#AreaCode").change(function () {
+            var code = $(this).val();
+            $.post("@(Url.Action("GetObject", "StatisticsCard"))", { "code": code }, function (data) {
+                $("#ObjectCode").html("<option value=''>- Chọn đối tượng -</option>");
+                $.each(data.list, function (i, val) {
+                    $("#ObjectCode").append("<option value='" + val.Code + "'>" + val.Name + "</option>");
+                });
+            });
+        });
+    });
+</script>
+<section id="content">
+    <section class="hbox stretch">
+        <aside>
+            <section class="vbox">
+                <header class="header bg-white b-b clearfix">
+                    <div class="row m-t-sm">
+                        <div class="col-sm-12 m-b-xs">
+                            <form id="gridSearch" class="form-inline" role="form">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-default" title="Filter" data-toggle="dropdown"><span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#showAll" data-event="showAll" data-grid="#mygird"><i class="fa fa-check icon-muted fa-fw"></i>Hiển thị</a></li>
+                                        <li><a href="#hideAll" data-event="hideAll" data-grid="#mygird"><i class="fa fa-times icon-muted fa-fw"></i>Ẩn</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#deleteAll" data-event="deleteAll" data-grid="#mygird"><i class="fa fa-trash-o icon-muted fa-fw"></i><span class="text">Xóa</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="Keyword">Chọn ngày</label>
+                                    <input type="text" name="fromDate" class="fieldSearchDate form-control input-sm" placeholder="Từ ngày" value="@DateTime.Now"/>
+                                    <input type="text" name="toDate" class="fieldSearchDate form-control input-sm" placeholder="Tới ngày" value="@DateTime.Now"/>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" style="width: 152px" data-val="true" id="BuidingCode" name="BuidingCode">
+                                        <option value="">- Chọn tòa nhà -</option>
+                                        @foreach (var item in Model.LstBuidingItems)
+                                        {
+                                            <option value="@item.Code">@item.Name</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" style="width: 154px" data-val="true" id="AreaCode" name="AreaCode">
+                                        <option value="">- Chọn khu vực -</option>
+                                        @foreach (var item in Model.LstAreaItems)
+                                        {
+                                            <option value="@item.Code">@item.Desc</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" style="width: 165px" data-val="true" id="ObjectCode" name="ObjectCode">
+                                        <option value="">- Chọn đối tượng -</option>
+                                        @foreach (var item in Model.LstObjectItems)
+                                        {
+                                            <option value="@item.Code">@item.Name</option>
+                                        }
+                                    </select>
+                                </div>
+                                <button name="submit.Search" type="submit" class="btn btn-sm btn-primary">Tìm kiếm</button>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+                <section id="Griditems" class="">
+                </section>
+            </section>
+        </aside>
+    </section>
+    <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+</section>

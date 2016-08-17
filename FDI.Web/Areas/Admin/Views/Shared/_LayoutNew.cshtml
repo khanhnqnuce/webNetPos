@@ -1,0 +1,171 @@
+﻿@model dynamic
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+    <meta charset="utf-8" />
+    <title>HTECH | Web Admin</title>
+    <link href="/Images/Icons/icon-cts.png" rel="shortcut icon" type="image/x-icon" />
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    @* <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />*@
+    @*<script src="~/Content/Admin/js/jquery-1.9.0.min.js" type="text/javascript"></script>*@
+    <script src="/Skin/js/jquery.min.js"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/Admin/js/jquery.address-1.6.min.js")" type="text/javascript"></script>
+    @*<script src="@Url.Content("~/Content/Admin/js/jquery-ui-1.11.4.custom/jquery-ui.min.js")" type="text/javascript"></script>*@
+    @*<script type="text/javascript" src="/Scripts/dialogextend/build/jquery.dialogextend.js"></script>*@
+    <script src="/Content/Admin/js/jquery.mask.js"></script>
+    <script src="@Url.Content("~/Content/Admin/js/jquery.multiselect.js")" type="text/javascript"></script>
+    @* <script src="@Url.Content("~/Content/Admin/js/jquery.treeview.js")" type="text/javascript"></script>*@
+    @*<script src="~/Content/Admin/js/jquery.autocomplete.js"></script>*@
+    <script src="/Content/Admin/js/GridView.js" type="text/javascript"></script>
+    @*<script src="@Url.Content("~/ckeditor/ckeditor.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/ckfinder/ckfinder.js")" type="text/javascript"></script>*@
+    @*<script src="@Url.Content("~/Content/Admin/js/CarMarket.js")" type="text/javascript"></script>*@
+    @*<script src="@Url.Content("~/Content/Admin/js/admin.js")"></script>*@
+    <script src="@Url.Content("~/Content/Admin/js/Load.js")"></script>
+    @*<script src="/Content/Admin/js/purl.js"></script>*@
+
+    @*<link href="/Scripts/AlertsNotify/notify.css" rel="stylesheet" />*@
+    @*<script src="/Content/Admin/jquery-timepicker/jquery.timepicker.min.js"></script>*@
+    @*<link href="/Content/Admin/jquery-timepicker/jquery.timepicker.css" rel="stylesheet" />*@
+    <link href="/Content/Admin/css/jquery.multiSelect.css" rel="stylesheet" type="text/css" />
+    @*<link href="/Content/Admin/css/jquery.treeview.css" rel="stylesheet" type="text/css" />*@
+    @*<link href="/Content/Admin/js/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />*@
+    <link href="/Content/Admin/css/gridview.css" rel="stylesheet" type="text/css" />
+    @*<link href="/Content/Admin/css/jquery.autocomplete.css" rel="stylesheet" type="text/css" />*@
+    @*<link href="/Content/Admin/css/styles.css" rel="stylesheet" type="text/css" />*@
+
+    <link rel="stylesheet" href="/Skin/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/Skin/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="/Skin/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="/Skin/css/font.css" type="text/css" />
+    <link rel="stylesheet" href="/Skin/js/datepicker/datepicker.css" type="text/css" />
+    <link rel="stylesheet" href="/Skin/css/app.css" type="text/css" />
+    <!--[if lt IE 9]>
+        <script src="/Skin/js/ie/html5shiv.js"></script>
+        <script src="/Skin/js/ie/respond.min.js"></script>
+        <script src="/Skin/js/ie/excanvas.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="/Content/Admin/Common.css" type="text/css" />
+</head>
+    <body>
+        @Html.Partial("~/Views/Home/Popup.cshtml")
+        <section class="vbox">
+            <header class="bg-dark dk header navbar navbar-fixed-top-xs">
+                <div class="navbar-header aside-md">
+                    <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <a href="/" class="navbar-brand" style="font-size: 13px">University of Civil Engineering</a>
+                    <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user">
+                        <i class="fa fa-cog"></i>
+                    </a>
+                </div>
+                <ul class="nav navbar-nav hidden-xs">
+                    <li class="dropdown">
+                        <section class="dropdown-menu aside-xl on animated fadeInLeft no-borders lt">
+                            <div class="wrapper lter m-t-n-xs">
+                                <a href="#" class="thumb pull-left m-r">
+                                    <img src="~/Skin/images/avatar.jpg" class="img-circle">
+                                </a>
+                                <div class="clear">
+                                    <a href="#"><span class="text-white font-bold">Mike Mcalidek</span></a>
+
+                                    <small class="block">Art Director</small>
+                                    <a href="#" class="btn btn-xs btn-success m-t-xs">Upgrade</a>
+                                </div>
+                            </div>
+                            <div class="row m-l-none m-r-none m-b-n-xs text-center">
+                                <div class="col-xs-4">
+                                    <div class="padder-v">
+                                        <span class="m-b-xs h4 block text-white">245</span>
+                                        <small class="text-muted">Followers</small>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 dk">
+                                    <div class="padder-v">
+                                        <span class="m-b-xs h4 block text-white">55</span>
+                                        <small class="text-muted">Likes</small>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="padder-v">
+                                        <span class="m-b-xs h4 block text-white">2,035</span>
+                                        <small class="text-muted">Photos</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+                @Html.Action("Infomation", "User")
+            </header>
+            <section>
+                <section class="hbox stretch">
+                    <!-- .aside -->
+                    <aside class="bg-dark lter aside-md hidden-print" id="nav">
+                        <section class="vbox">
+                            <section class="w-f scrollable">
+                                <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px" data-color="#333333">
+                                    <!-- nav -->
+                                    @Html.Action("Menu", "Admin")
+                                    <!-- / nav -->
+                                </div>
+                            </section>
+
+                            <footer class="footer lt hidden-xs b-t b-dark">
+                                <div id="chat" class="dropup">
+                                    <section class="dropdown-menu on aside-md m-l-n">
+                                        <section class="panel bg-white">
+                                            <header class="panel-heading b-b b-light">Active chats</header>
+                                            <div class="panel-body animated fadeInRight">
+                                                <p class="text-sm">No active chats.</p>
+                                                <p><a href="#" class="btn btn-sm btn-default">Start a chat</a></p>
+                                            </div>
+                                        </section>
+                                    </section>
+                                </div>
+                                <div id="invite" class="dropup">
+                                    <section class="dropdown-menu on aside-md m-l-n">
+                                        <section class="panel bg-white">
+                                            <header class="panel-heading b-b b-light">
+                                                John <i class="fa fa-circle text-success"></i>
+                                            </header>
+                                            <div class="panel-body animated fadeInRight">
+                                                <p class="text-sm">No contacts in your lists.</p>
+                                                <p><a href="#" class="btn btn-sm btn-facebook"><i class="fa fa-fw fa-facebook"></i>Invite from Facebook</a></p>
+                                            </div>
+                                        </section>
+                                    </section>
+                                </div>
+                                <a href="#nav" data-toggle="class:nav-xs" class="pull-right btn btn-sm btn-dark btn-icon">
+                                    <i class="fa fa-angle-left text"></i>
+                                    <i class="fa fa-angle-right text-active"></i>
+                                </a>
+                                <div class="btn-group hidden-nav-xs">
+                                    <button type="button" title="Chats" class="btn btn-icon btn-sm btn-dark" data-toggle="dropdown" data-target="#chat"><i class="fa fa-comment-o"></i></button>
+                                    <button type="button" title="Contacts" class="btn btn-icon btn-sm btn-dark" data-toggle="dropdown" data-target="#invite"><i class="fa fa-facebook"></i></button>
+                                </div>
+                            </footer>
+                        </section>
+                    </aside>
+                    <!-- /.aside -->
+                    @RenderBody()
+                    <aside class="bg-light lter b-l aside-md hide" id="notes">
+                        <div class="wrapper">Notification</div>
+                    </aside>
+                </section>
+            </section>
+        </section>
+        <!-- Bootstrap -->
+        <script src="/Skin/js/bootstrap.js"></script>
+        <!-- App -->
+        <script src="/Skin/js/app.js"></script>
+        <script src="/Skin/js/app.plugin.js"></script>
+        <script src="/Skin/js/slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="/Skin/js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
+        <script src="/Skin/js/charts/sparkline/jquery.sparkline.min.js"></script>
+        <script src="/Skin/js/datepicker/bootstrap-datepicker.js"></script>
+    </body>
+</html>
