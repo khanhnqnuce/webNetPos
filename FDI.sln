@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDI.Base", "FDI.Base\FDI.Base.csproj", "{689F0818-80D1-4E5C-A498-806C59E25A3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDI.DA", "FDI.DA\FDI.DA.csproj", "{C328BA20-98BA-4769-8A45-7F53B2B5A6D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDI.Memcached", "FDI.Memcached\FDI.Memcached.csproj", "{A100FD37-79BF-4854-9EB5-504435E10362}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDI.Membership", "FDI.MvcMembership\FDI.Membership.csproj", "{C9D7F653-E589-44CE-9D41-89821F4F9E4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDI.Simple", "FDI.Simple\FDI.Simple.csproj", "{187FD03C-2A93-4881-9B02-9E7A80F54F7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDI.Utils", "FDI.Utils\FDI.Utils.csproj", "{B34B3278-35A8-4426-9564-F148F5220F09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDI.Web", "FDI.Web\FDI.Web.csproj", "{F70F0CF3-20E4-4DE1-96EB-CDE7F235690D}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.100.111:8080/tfs/congnghefdi
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = FDI.Base\\FDI.Base.csproj
+		SccProjectName1 = FDI.Base
+		SccLocalPath1 = FDI.Base
+		SccProjectUniqueName2 = FDI.DA\\FDI.DA.csproj
+		SccProjectName2 = FDI.DA
+		SccLocalPath2 = FDI.DA
+		SccProjectUniqueName3 = FDI.Memcached\\FDI.Memcached.csproj
+		SccProjectName3 = FDI.Memcached
+		SccLocalPath3 = FDI.Memcached
+		SccProjectUniqueName4 = FDI.MvcMembership\\FDI.Membership.csproj
+		SccProjectName4 = FDI.MvcMembership
+		SccLocalPath4 = FDI.MvcMembership
+		SccProjectUniqueName5 = FDI.Simple\\FDI.Simple.csproj
+		SccProjectName5 = FDI.Simple
+		SccLocalPath5 = FDI.Simple
+		SccProjectUniqueName6 = FDI.Utils\\FDI.Utils.csproj
+		SccProjectName6 = FDI.Utils
+		SccLocalPath6 = FDI.Utils
+		SccProjectUniqueName7 = FDI.Web\\FDI.Web.csproj
+		SccProjectName7 = FDI.Web
+		SccLocalPath7 = FDI.Web
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{689F0818-80D1-4E5C-A498-806C59E25A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{689F0818-80D1-4E5C-A498-806C59E25A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{689F0818-80D1-4E5C-A498-806C59E25A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{689F0818-80D1-4E5C-A498-806C59E25A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C328BA20-98BA-4769-8A45-7F53B2B5A6D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C328BA20-98BA-4769-8A45-7F53B2B5A6D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C328BA20-98BA-4769-8A45-7F53B2B5A6D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C328BA20-98BA-4769-8A45-7F53B2B5A6D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A100FD37-79BF-4854-9EB5-504435E10362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A100FD37-79BF-4854-9EB5-504435E10362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A100FD37-79BF-4854-9EB5-504435E10362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A100FD37-79BF-4854-9EB5-504435E10362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D7F653-E589-44CE-9D41-89821F4F9E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D7F653-E589-44CE-9D41-89821F4F9E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D7F653-E589-44CE-9D41-89821F4F9E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D7F653-E589-44CE-9D41-89821F4F9E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{187FD03C-2A93-4881-9B02-9E7A80F54F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{187FD03C-2A93-4881-9B02-9E7A80F54F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{187FD03C-2A93-4881-9B02-9E7A80F54F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{187FD03C-2A93-4881-9B02-9E7A80F54F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B34B3278-35A8-4426-9564-F148F5220F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34B3278-35A8-4426-9564-F148F5220F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34B3278-35A8-4426-9564-F148F5220F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34B3278-35A8-4426-9564-F148F5220F09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F70F0CF3-20E4-4DE1-96EB-CDE7F235690D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F70F0CF3-20E4-4DE1-96EB-CDE7F235690D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F70F0CF3-20E4-4DE1-96EB-CDE7F235690D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F70F0CF3-20E4-4DE1-96EB-CDE7F235690D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal
