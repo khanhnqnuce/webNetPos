@@ -52,6 +52,12 @@ namespace FDI.DA
             }
         }
 
+        public tblCustomer Get(string code)
+        {
+            var query = from c in FDIDB.tblCustomers where c.CustomerID == code select c;
+            return query.FirstOrDefault();
+        }
+
         public void Add(tblUser item)
         {
             FDIDB.tblUsers.Add(item);

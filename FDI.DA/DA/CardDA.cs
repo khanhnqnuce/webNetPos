@@ -44,7 +44,7 @@ namespace FDI.DA
             {
                 var buiding = httpRequest["BuidingCode"] ?? "";
                 var area = httpRequest["AreaCode"] ?? "";
-                var obj = httpRequest["ObjectCode"] ?? ""; 
+                var obj = httpRequest["ObjectCode"] ?? "";
                 var query = from c in FDIDB.sp_ThongKeTheChiTiet(buiding, area, obj)
                             select new CardItem
                             {
@@ -79,7 +79,7 @@ namespace FDI.DA
                                 CustomerName = c.CustomerName,
                                 Balance = c.Balance,
                                 CardType = c.CardType,
-                                CardStatus = c.CardStatus == "00"?"Chưa phát hành":(c.CardStatus == "01"?"Đã phát hành":"Đã khóa"),
+                                CardStatus = c.CardStatus == "00" ? "Chưa phát hành" : (c.CardStatus == "01" ? "Đã phát hành" : "Đã khóa"),
                                 DateIssue = c.DateIssue == null ? "" : c.DateIssue.Value.ToString("dd/MM/yyyy"),
                             };
                 return query.ToList();
@@ -138,16 +138,60 @@ namespace FDI.DA
             try
             {
                 var query = from c in FDIDB.sp_GiaoDichGanNhat(card, startDate, endDate)
-                        orderby c.Date descending 
-                        select new GiaoDichItem
-                        {
-                            Event = c.Event,
-                            Date = c.Date ?? new DateTime(),
-                            Value = c.Value > 0 ?(decimal) c.Value:(decimal)(0-c.Value),
-                            Balance = c.Balance ?? 0,
-                            Object = c.Object,
-                        };
-            return query.ToList();
+                            orderby c.Date descending
+                            select new GiaoDichItem
+                            {
+                                Event = c.Event,
+                                Date = c.Date ?? new DateTime(),
+                                Value = c.Value > 0 ? (decimal)c.Value : (decimal)(0 - c.Value),
+                                Balance = c.Balance ?? 0,
+                                Object = c.Object,
+                            };
+                return query.ToList();
+            }
+            catch (Exception)
+            {
+                return new List<GiaoDichItem>();
+            }
+        }
+
+        public List<GiaoDichItem> GiaoDichNapTien(string card, DateTime startDate, DateTime endDate)
+        {
+            try
+            {
+                var query = from c in FDIDB.sp_GiaoDichNapTien(card, startDate, endDate)
+                            orderby c.Date descending
+                            select new GiaoDichItem
+                            {
+                                Event = c.Event,
+                                Date = c.Date ?? new DateTime(),
+                                Value = c.Value ?? 0,
+                                Balance = c.Balance ?? 0,
+                                Object = c.Object,
+                            };
+                return query.ToList();
+            }
+            catch (Exception)
+            {
+                return new List<GiaoDichItem>();
+            }
+        }
+
+        public List<GiaoDichItem> GiaoDichTruTien(string card, DateTime startDate, DateTime endDate)
+        {
+            try
+            {
+                var query = from c in FDIDB.sp_GiaoDichTruTien(card, startDate, endDate)
+                            orderby c.Date descending
+                            select new GiaoDichItem
+                            {
+                                Event = c.Event,
+                                Date = c.Date ?? new DateTime(),
+                                Value = c.Value ?? 0,
+                                Balance = c.Balance ?? 0,
+                                Object = c.Object,
+                            };
+                return query.ToList();
             }
             catch (Exception)
             {
@@ -170,7 +214,7 @@ namespace FDI.DA
                             CustomerName = c.CustomerName,
                             DateIssue = c.DateIssue ?? new DateTime(),
                             BirthDate = c.BirthDate == null ? "" : c.BirthDate.Value.ToString("dd/MM/yyyy"),
-                            CustomerClass = c.CustomerClass??0,
+                            CustomerClass = c.CustomerClass ?? 0,
                             SchoolYear = c.SchoolYear
                         };
             return query.FirstOrDefault();
@@ -186,6 +230,18 @@ namespace FDI.DA
                                 //CardTypeCode = c.NameType
                             };
             return query.FirstOrDefault();
+        }
+
+        public List<CardItem> GetListCard(string code)
+        {
+            var query = from c in FDIDB.tblCards
+                        where c.OwnerCode.Contains(code)
+                        select new CardItem
+                            {
+                                CardNumber = c.CardNumber,
+                                Balance = c.Balance
+                            };
+            return query.ToList();
         }
 
         public List<AreaItem> GetArea(string code)
@@ -206,7 +262,7 @@ namespace FDI.DA
             {
                 return new List<AreaItem>();
             }
-            
+
         }
 
         public List<ObjectItem> GetObject(string code)
@@ -227,7 +283,7 @@ namespace FDI.DA
             {
                 return new List<ObjectItem>();
             }
-            
+
         }
 
         //public List<RecordItem> ReportRevenueCard(DateTime startDate, DateTime endDate, string buiding, string area, string obj)
@@ -281,7 +337,7 @@ namespace FDI.DA
         //    {
         //        return new List<RecordItem>();
         //    }
-            
+
         //}
 
         public List<ThongKeItem> DTBanTheTongHop(DateTime startDate, DateTime endDate, string buiding, string area, string obj)
@@ -322,7 +378,6 @@ namespace FDI.DA
 
         }
 
-        
         public List<tblCard> Get(List<int> lst)
         {
             var query = from c in FDIDB.tblCards where lst.Contains(c.Id) select c;
@@ -333,11 +388,6 @@ namespace FDI.DA
         {
             var query = from c in FDIDB.tblCards where c.Id == id select c;
             return query.FirstOrDefault();
-        }
-
-        public void UpdateCard(string cardOld, string cardNew)
-        {
-            FDIDB.sp_UpdateCard(cardNew, cardOld);
         }
 
         public tblCard GetCard(int id)
@@ -364,6 +414,11 @@ namespace FDI.DA
             {
                 return null;
             }
+        }
+
+        public void UpdateCard(string cardOld, string cardNew)
+        {
+            FDIDB.sp_UpdateCard(cardNew, cardOld);
         }
 
         public void Add(tblCard item)
