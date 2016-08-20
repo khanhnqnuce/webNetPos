@@ -65,6 +65,7 @@
     <Compile Include="GiaoDichItem.cs" />
     <Compile Include="LogItem.cs" />
     <Compile Include="ModelItem.cs" />
+    <Compile Include="MsgItem.cs" />
     <Compile Include="ObjectItem.cs" />
     <Compile Include="PCItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
