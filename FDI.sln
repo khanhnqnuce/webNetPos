@@ -16,33 +16,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDI.Web", "FDI.Web\FDI.Web.csproj", "{F70F0CF3-20E4-4DE1-96EB-CDE7F235690D}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://192.168.100.111:8080/tfs/congnghefdi
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = FDI.Base\\FDI.Base.csproj
-		SccProjectName1 = FDI.Base
-		SccLocalPath1 = FDI.Base
-		SccProjectUniqueName2 = FDI.DA\\FDI.DA.csproj
-		SccProjectName2 = FDI.DA
-		SccLocalPath2 = FDI.DA
-		SccProjectUniqueName3 = FDI.Memcached\\FDI.Memcached.csproj
-		SccProjectName3 = FDI.Memcached
-		SccLocalPath3 = FDI.Memcached
-		SccProjectUniqueName4 = FDI.MvcMembership\\FDI.Membership.csproj
-		SccProjectName4 = FDI.MvcMembership
-		SccLocalPath4 = FDI.MvcMembership
-		SccProjectUniqueName5 = FDI.Simple\\FDI.Simple.csproj
-		SccProjectName5 = FDI.Simple
-		SccLocalPath5 = FDI.Simple
-		SccProjectUniqueName6 = FDI.Utils\\FDI.Utils.csproj
-		SccProjectName6 = FDI.Utils
-		SccLocalPath6 = FDI.Utils
-		SccProjectUniqueName7 = FDI.Web\\FDI.Web.csproj
-		SccProjectName7 = FDI.Web
-		SccLocalPath7 = FDI.Web
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
