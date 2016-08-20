@@ -21,15 +21,15 @@
                 <div class="col-md-4">
                     <div class="box-log-res">
                         <b>Đăng Nhập</b>
-                        @Html.Raw(ViewBag.Warning)
+                        <h4>Chào mừng bạn đến với đại học FPT</h4>
                         <form class="form-logres-sty" id="formLogin" action="/Login/ProcessLogin" method="POST">
                             <div class="form-group">
                                 <label class="control-label">Tên đăng nhập: <strong>*</strong></label>
-                                <input type="text" class="form-control" name="iptLoginUser" id="iptLoginUser"/>
+                                <input type="text" class="form-control" name="iptLoginUser" id="iptLoginUser" />
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Mật khẩu: <strong>*</strong></label>
-                                <input type="password" class="form-control" name="iptLoginPass"id="iptLoginPass" />
+                                <input type="password" class="form-control" name="iptLoginPass" id="iptLoginPass" />
                             </div>
                             <div class="form-group">
                                 <span>
@@ -58,11 +58,20 @@
         $("#formLogin").submit(function () {
             if ($("#iptLoginUser").val() == "") {
                 $(".box-log-res h4").html("Chưa nhập tên tài khoản");
-                return false;
+
             } else if ($("#iptLoginPass").val() == "") {
                 $(".box-log-res h4").html("Chưa nhập mật khẩu");
-                return false;
+            } else {
+                $("#error").html("");
+                $.post("/Login/ProcessLogin", $("#formLogin").serialize(), function (data) {
+                    if (!data.Errors) {
+                        window.location.href = "/";
+                    } else {
+                        $(".box-log-res h4").html(data.Msg);
+                    }
+                });
             }
+            return false;
         });
     })
 </script>

@@ -89,6 +89,10 @@ namespace FDI.Areas.Admin.Controllers
             return txt;
         }
 
+        public ActionResult Excel()
+        {
+            return null;
+        }
 
     }
 }

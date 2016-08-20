@@ -258,7 +258,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Common\CapcharResult.cs" />
+    <Compile Include="Common\Excel.cs" />
+    <Compile Include="Common\log2File.cs" />
     <Compile Include="Common\Utility.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">

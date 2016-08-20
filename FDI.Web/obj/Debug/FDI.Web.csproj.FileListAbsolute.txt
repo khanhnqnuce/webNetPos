@@ -1,0 +1,219 @@
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\obj\Debug\FDI.Web.csprojResolveAssemblyReference.cache
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.Web.dll.config
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.Web.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.Web.pdb
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.Base.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.Business.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.DA.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.Simple.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.Base.pdb
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.Business.pdb
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.DA.pdb
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.Simple.pdb
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\obj\Debug\FDI.Web.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\obj\Debug\FDI.Web.pdb
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\Microsoft.Web.Infrastructure.xml
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\System.Net.Http.Formatting.xml
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\System.Web.Http.xml
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\System.Web.Http.WebHost.xml
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\System.Web.Mvc.xml
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\System.Web.Razor.xml
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\System.Web.WebPages.xml
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\System.Web.WebPages.Deployment.xml
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\System.Web.WebPages.Razor.xml
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Web.dll.config
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Web.dll
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Web.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Base.dll
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Business.dll
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.DA.dll
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Simple.dll
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Base.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Business.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.DA.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Simple.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Memcached.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\Newtonsoft.Json.xml
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\EntityFramework.xml
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\Microsoft.Web.Infrastructure.xml
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\System.Net.Http.Formatting.xml
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\System.Web.Http.xml
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\System.Web.Http.WebHost.xml
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\System.Web.Mvc.xml
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\System.Web.Razor.xml
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\System.Web.WebPages.xml
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\System.Web.WebPages.Deployment.xml
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\System.Web.WebPages.Razor.xml
+D:\PROJECTS\fdiv4\Code\FDI.Web\obj\Debug\FDI.Web.csprojResolveAssemblyReference.cache
+D:\PROJECTS\fdiv4\Code\FDI.Web\obj\Debug\FDI.Web.dll
+D:\PROJECTS\fdiv4\Code\FDI.Web\obj\Debug\FDI.Web.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Web\obj\Debug\FDI.Web.csproj.GenerateResource.Cache
+E:\Test\Website4\Code\FDI.Web\obj\Debug\FDI.Web.csprojResolveAssemblyReference.cache
+E:\Test\Website4\Code\FDI.Web\obj\Debug\FDI.Web.dll
+E:\Test\Website4\Code\FDI.Web\obj\Debug\FDI.Web.pdb
+E:\Test\Website4\Code\FDI.Web\bin\FDI.Web.dll.config
+E:\Test\Website4\Code\FDI.Web\bin\FDI.Web.dll
+E:\Test\Website4\Code\FDI.Web\bin\FDI.Web.pdb
+E:\Test\Website4\Code\FDI.Web\bin\FDI.Base.pdb
+E:\Test\Website4\Code\FDI.Web\bin\FDI.DA.pdb
+E:\Test\Website4\Code\FDI.Web\bin\FDI.Simple.pdb
+E:\Test\Website4\Code\FDI.Web\bin\Microsoft.Web.Infrastructure.xml
+E:\Test\Website4\Code\FDI.Web\bin\System.Net.Http.Formatting.xml
+E:\Test\Website4\Code\FDI.Web\bin\System.Web.Http.xml
+E:\Test\Website4\Code\FDI.Web\bin\System.Web.Http.WebHost.xml
+E:\Test\Website4\Code\FDI.Web\bin\System.Web.Razor.xml
+E:\Test\Website4\Code\FDI.Web\bin\System.Web.WebPages.Deployment.xml
+E:\Test\Website4\Code\FDI.Web\bin\System.Web.WebPages.Razor.xml
+D:\FdiSoft\Project\Code\CTS.Web\obj\Debug\FDI.Web.csprojResolveAssemblyReference.cache
+D:\FdiSoft\Project\Code\CTS.Web\obj\Debug\FDI.Web.Areas.Admin.App_GlobalResources.CSResourceString.resources
+D:\FdiSoft\Project\Code\CTS.Web\obj\Debug\FDI.Web.Areas.Admin.App_GlobalResources.Frt_Rs_Login.resources
+D:\FdiSoft\Project\Code\CTS.Web\obj\Debug\FDI.Web.Areas.Admin.App_GlobalResources.Resource.resources
+D:\FdiSoft\Project\Code\CTS.Web\obj\Debug\FDI.Web.Areas.Admin.App_GlobalResources.Resource.en.resources
+D:\FdiSoft\Project\Code\CTS.Web\obj\Debug\FDI.Web.csproj.GenerateResource.Cache
+D:\FdiSoft\Project\Code\CTS.Web\obj\Debug\FDI.Web.dll
+D:\FdiSoft\Project\Code\CTS.Web\obj\Debug\FDI.Web.pdb
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.Web.dll.config
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.Web.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.Web.pdb
+D:\FdiSoft\Project\Code\FDI.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Net.Http.Formatting.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.Helpers.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.Http.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.Http.WebHost.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.Razor.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.WebPages.Deployment.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.WebPages.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.WebPages.Razor.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\WebMatrix.Data.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\WebMatrix.WebData.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\Microsoft.Web.Infrastructure.xml
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Net.Http.Formatting.xml
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.Helpers.xml
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.Http.xml
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.Http.WebHost.xml
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.Razor.xml
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.WebPages.xml
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.WebPages.Deployment.xml
+D:\FdiSoft\Project\Code\FDI.Web\bin\System.Web.WebPages.Razor.xml
+D:\FdiSoft\Project\Code\FDI.Web\bin\WebMatrix.Data.xml
+D:\FdiSoft\Project\Code\FDI.Web\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\FdiSoft\Project\Code\FDI.Web\bin\WebMatrix.WebData.xml
+D:\FdiSoft\Project\Code\FDI.Web\obj\Debug\FDI.Web.dll
+D:\FdiSoft\Project\Code\FDI.Web\obj\Debug\FDI.Web.pdb
+D:\FdiSoft\Project\Code\FDI.Web\obj\Debug\FDI.Web.csprojResolveAssemblyReference.cache
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.DA.pdb
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.Simple.pdb
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.Base.pdb
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.Memcached.pdb
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.MvcMembership.pdb
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.MvcMembership.xml
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.Utils.pdb
+D:\FdiSoft\FDI\Code\FDI.Web\obj\Debug\FDI.Web.csprojResolveAssemblyReference.cache
+D:\FdiSoft\FDI\Code\FDI.Web\obj\Debug\FDI.Web.dll
+D:\FdiSoft\FDI\Code\FDI.Web\obj\Debug\FDI.Web.pdb
+D:\FdiSoft\FDI\Code\FDI.Web\bin\FDI.Web.dll.config
+D:\FdiSoft\FDI\Code\FDI.Web\bin\FDI.Web.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\FDI.Web.pdb
+D:\FdiSoft\FDI\Code\FDI.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Net.Http.Formatting.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.Helpers.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.Http.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.Http.WebHost.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.Razor.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.WebPages.Deployment.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.WebPages.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.WebPages.Razor.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\WebMatrix.Data.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\WebMatrix.WebData.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\Microsoft.Web.Infrastructure.xml
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Net.Http.Formatting.xml
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.Helpers.xml
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.Http.xml
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.Http.WebHost.xml
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.Razor.xml
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.WebPages.xml
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.WebPages.Deployment.xml
+D:\FdiSoft\FDI\Code\FDI.Web\bin\System.Web.WebPages.Razor.xml
+D:\FdiSoft\FDI\Code\FDI.Web\bin\WebMatrix.Data.xml
+D:\FdiSoft\FDI\Code\FDI.Web\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\FdiSoft\FDI\Code\FDI.Web\bin\WebMatrix.WebData.xml
+D:\FdiSoft\FDI\Code\FDI.Web\bin\FDI.Base.pdb
+D:\FdiSoft\FDI\Code\FDI.Web\bin\FDI.DA.pdb
+D:\FdiSoft\FDI\Code\FDI.Web\bin\FDI.Simple.pdb
+D:\FdiSoft\FDI\Code\FDI.Web\bin\FDI.Utils.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\obj\Debug\FDI.Web.csprojResolveAssemblyReference.cache
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\obj\Debug\FDI.Web.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\obj\Debug\FDI.Web.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.Web.dll.config
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.Web.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.Web.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Net.Http.Formatting.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.Helpers.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.Http.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.Http.WebHost.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.Razor.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.WebPages.Deployment.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.WebPages.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.WebPages.Razor.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\WebMatrix.Data.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\WebMatrix.WebData.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.Base.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.DA.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.Simple.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.Utils.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\Microsoft.Web.Infrastructure.xml
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Net.Http.Formatting.xml
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.Helpers.xml
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.Http.xml
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.Http.WebHost.xml
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.Razor.xml
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.WebPages.xml
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.WebPages.Deployment.xml
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\System.Web.WebPages.Razor.xml
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\WebMatrix.Data.xml
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\WebMatrix.WebData.xml
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.Memcached.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.MvcMembership.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.MvcMembership.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.Web.dll.config
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.Web.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.Web.pdb
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Net.Http.Formatting.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.Helpers.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.Http.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.Http.WebHost.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.Razor.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.WebPages.Deployment.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.WebPages.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.WebPages.Razor.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\WebMatrix.Data.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\WebMatrix.WebData.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.Base.pdb
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.DA.pdb
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.Memcached.pdb
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.MvcMembership.pdb
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.MvcMembership.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.Simple.pdb
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.Utils.pdb
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\Microsoft.Web.Infrastructure.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Net.Http.Formatting.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.Helpers.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.Http.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.Http.WebHost.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.Razor.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.WebPages.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.WebPages.Deployment.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\System.Web.WebPages.Razor.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\WebMatrix.Data.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\WebMatrix.WebData.xml
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\obj\Debug\FDI.Web.csprojResolveAssemblyReference.cache
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\obj\Debug\FDI.Web.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\obj\Debug\FDI.Web.pdb

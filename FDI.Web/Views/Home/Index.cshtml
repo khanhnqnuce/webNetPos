@@ -9,6 +9,37 @@
             buttonImageOnly: true,
             format: 'dd/mm/yyyy'
         }).mask('00/00/0000');
+
+        $("#shopping-cart").click(function () {
+            $(".title").html("Chi tiết giao dịch trừ tiền");
+            $("#typecard").val("1");
+            $.post("/Home/ListDetail", $("#form-search").serialize(), function (data) {
+                $(".gridView tbody").html(data);
+            });
+        });
+
+        $("#money").click(function () {
+            $(".title").html("Chi tiết giao dịch nạp tiền");
+            $("#typecard").val("2");
+            $.post("/Home/ListDetail", $("#form-search").serialize(), function (data) {
+                $(".gridView tbody").html(data);
+            });
+        });
+
+        $("#btn-search").click(function () {
+            var type = $("#typecard").val();
+            if (type == 1) {
+                $("#shopping-cart").click();
+            }
+            if (type == 2) {
+                $("#money").click();
+            }
+        });
+
+        $(".lstcardnumber").click(function () {
+            $("#cardNumber").val($(this).data("card"));
+            $("#btn-search").click();
+        });
     })
 </script>
 <div class="wrapper">
@@ -47,28 +78,31 @@
                             <div class="content-right">
                                 <div class="box-content">
                                     <div class="row">
-                                        <div class="col-lg-3">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Nhập mã thẻ">
+                                        <form id="form-search" method="POST">
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <input type="text" name="cardNumber" id="cardNumber" class="form-control" placeholder="Nhập mã thẻ">
+                                                    <input type="hidden" id="typecard" name="typecard" value="1">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <div class="form-group">
-                                                <input type="text" name="fromDate" class="fieldSearchDate form-control" placeholder="Từ ngày" />
+                                            <div class="col-lg-2">
+                                                <div class="form-group">
+                                                    <input type="text" name="fromDate" class="fieldSearchDate form-control" placeholder="Từ ngày" value="@DateTime.Now"/>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <div class="form-group">
-                                                <input type="text" name="toDate" class="fieldSearchDate form-control" placeholder="Tới ngày" />
+                                            <div class="col-lg-2">
+                                                <div class="form-group">
+                                                    <input type="text" name="toDate" class="fieldSearchDate form-control" placeholder="Tới ngày" value="@DateTime.Now"/>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-1">
-                                            <div class="form-group">
-                                                <button type="submit" class="btn btn-sm btn-primary">Tìm kiếm</button>
+                                            <div class="col-lg-1">
+                                                <div class="form-group">
+                                                    <button type="button" class="btn btn-sm btn-primary" data-type="1" id="btn-search">Tìm kiếm</button>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
-                                    <b style="margin-bottom: 15px;">Chi tiết giao dịch trừ tiền</b>
+                                    <b style="margin-bottom: 15px;" class="title">Chi tiết giao dịch trừ tiền</b>
                                 </div>
                             </div>
                             <table class="gridView table table-bordered">

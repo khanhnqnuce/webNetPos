@@ -1,0 +1,13 @@
+Trying to add new property 'svn:ignore'
+but the property already exists.
+<<<<<<< (local property value)
+TempPE
+DesignTimeResolveAssemblyReferences.cache
+=======
+TempPE
+DesignTimeResolveAssemblyReferencesInput.cache
+FDI.Web.Areas.News.App_GlobalResources.Resource.resources
+FDI.Web.csproj.FileListAbsolute.txt
+FDI.Web.csproj.GenerateResource.Cache
+FDI.Web.csprojResolveAssemblyReference.cache
+>>>>>>> (incoming property value)

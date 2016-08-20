@@ -1,47 +1,64 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using FDI.DA;
+using FDI.Simple;
+using FDI.Utils;
+using NPOI.HSSF.Record.Chart;
 
 namespace FDI.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+        readonly CardDA _da = new CardDA();
         public ActionResult Index()
         {
-            var cookie = Request.Cookies["IPCID"];
-            if (cookie == null) return Redirect("/dang-nhap");
-
-            var cookiepass = Request.Cookies["IPPW"];
-
-            if (cookiepass != null)
-            {
-                var pass = cookiepass.Value;
-                if (pass == "9D31E787F638E7D58A75724398CADA4A")
-                    return Redirect("/doi-mat-khau");
-            }
-
-            var cookiename = Request.Cookies["IPFN"];
-            ViewBag.Name = cookiename.Value;
-            ViewBag.ID = cookie.Value;
+            if (CustomerId == null) return Redirect("/dang-nhap");
+            if (PassWord == "9D31E787F638E7D58A75724398CADA4A")
+                return Redirect("/doi-mat-khau");
+            ViewBag.Name = FullName;
+            ViewBag.ID = CustomerId;
             return PartialView();
         }
 
         public ActionResult Infomation()
         {
-            var cookie = Request.Cookies["IPCID"];
-            var cookiename = Request.Cookies["IPFN"];
-            ViewBag.Name = cookiename.Value;
-            ViewBag.ID = cookie.Value.ToUpper();
-            return PartialView();
+            ViewBag.Name = FullName;
+            ViewBag.ID = CustomerId;
+            var model = _da.GetListCard(CustomerId);
+            var lst = model.Select(c => c.CardNumber).ToList();
+            Session["lstCard"] = string.Join(",", lst);
+            return PartialView(model);
         }
 
         public ActionResult ListDetail()
         {
-            return PartialView();
+            var model = new List<GiaoDichItem>();
+            var card = Request["cardNumber"];
+            var lstCard = (string) Session["lstCard"]??"";
+            if (!lstCard.Contains(card))
+            {
+                return Json("<tr><td colspan='5' style='color:red'>Mã thẻ không đúng</td></tr>");
+            }
+            var typecard = Request["typecard"];
+            var fromdate = Request["fromDate"];
+            var todate = Request["toDate"];
+            if (typecard == "1")
+            {
+                model = _da.GiaoDichTruTien(card, ConvertUtil.ToDate(fromdate), ConvertUtil.ToDate(todate).AddDays(1));
+            }
+            if (typecard == "2")
+            {
+                model = _da.GiaoDichNapTien(card, ConvertUtil.ToDate(fromdate), ConvertUtil.ToDate(todate).AddDays(1));
+            }
+            return PartialView(model);
         }
 
         public ActionResult ChangePass()
         {
-            var cookie = Request.Cookies["IPCID"];
-            if (cookie == null) return Redirect("/dang-nhap");
+            if (CustomerId == null) return Redirect("/dang-nhap");
             return PartialView();
         }
     }

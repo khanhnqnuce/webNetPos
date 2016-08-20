@@ -7,7 +7,7 @@ using FDI.Utils;
 
 namespace FDI.Web.Controllers
 {
-    public class LoginController : Controller
+    public class LoginController : BaseController
     {
         readonly UserDA _da = new UserDA();
 
@@ -20,36 +20,49 @@ namespace FDI.Web.Controllers
         [HttpPost]
         public ActionResult ProcessLogin()
         {
-            var user = Request["iptLoginUser"] ?? "";
-            var pass = Request["iptLoginPass"] ?? "";
-            var item = _da.CustomerLogin("17" + user + "05", FDIUtils.GetMd5Sum(pass));
-            if (item != null)
+            var msg = new MsgItem
             {
-                var cookie1 = new HttpCookie("IPFN")
-                {
-                    Value = item.CustomerName,
-                    Expires = DateTime.Now.AddDays(1)
-                };
-                var cookie2 = new HttpCookie("IPPW")
-                {
-                    Value = item.PassWord,
-                    Expires = DateTime.Now.AddDays(1)
-                };
-                var cookie3 = new HttpCookie("IPCID")
-                {
-                    Value = user,
-                    Expires = DateTime.Now.AddDays(1)
-                };
-                Response.SetCookie(cookie1);
-                Response.SetCookie(cookie2);
-                Response.SetCookie(cookie3);
-                return Redirect("/");
-            }
-            else
+                Errors = false,
+                Msg = "Đăng nhập thành công"
+            };
+            try
             {
-                ViewData["Warning"] = "<h4>Sai thông tin đăng nhập</h4>";
-                return Redirect("/dang-nhap");
+                var user = Request["iptLoginUser"] ?? "";
+                var pass = Request["iptLoginPass"] ?? "";
+                var item = _da.CustomerLogin("17" + user + "05", FDIUtils.GetMd5Sum(pass));
+                if (item != null)
+                {
+                    var cookie1 = new HttpCookie("IPFN")
+                    {
+                        Value = FDIUtils.Encrypt(item.CustomerName),
+                        Expires = DateTime.Now.AddDays(1)
+                    };
+                    var cookie2 = new HttpCookie("IPPW")
+                    {
+                        Value = item.PassWord,
+                        Expires = DateTime.Now.AddDays(1)
+                    };
+                    var cookie3 = new HttpCookie("IPCID")
+                    {
+                        Value = FDIUtils.Encrypt(user),
+                        Expires = DateTime.Now.AddDays(1)
+                    };
+                    Response.SetCookie(cookie1);
+                    Response.SetCookie(cookie2);
+                    Response.SetCookie(cookie3);
+                }
+                else
+                {
+                    msg.Errors = true;
+                    msg.Msg = "Sai thông tin đăng nhập";
+                }
             }
+            catch (Exception)
+            {
+                msg.Errors = true;
+                msg.Msg = "Đăng nhập thất bại";
+            }
+            return Json(msg);
         }
 
         public ActionResult ProcessLogout()
@@ -84,23 +97,19 @@ namespace FDI.Web.Controllers
                 Msg = "Đổi mật khẩu thành công"
             };
             var pass = Request["iptLoginPass"];
-            var cookie = Request.Cookies["IPCID"];
-            var cookiePass = Request.Cookies["IPPW"];
-            if (FDIUtils.GetMd5Sum(pass)=="9D31E787F638E7D58A75724398CADA4A")
+            if (FDIUtils.GetMd5Sum(pass) == "9D31E787F638E7D58A75724398CADA4A")
             {
                 msg.Errors = true;
                 msg.Msg = "Mật khẩu trùng với mật khẩu mặc định";
-                return Json(msg);
             }
-            if (cookie != null)
+            else
             {
-                var item = _da.Get("17" + cookie.Value + "05");
+                var item = _da.Get("17" + CustomerId + "05");
                 item.PassWord = FDIUtils.GetMd5Sum(pass);
                 _da.Save();
-                return Json(msg);
             }
-
             return Json(msg);
+
         }
 
     }
