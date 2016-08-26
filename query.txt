@@ -1,0 +1,17 @@
+SELECT	DATEPART(year, '2016-05-16 16:12:51.000') as [YEAR],
+		DATEPART(QUARTER, '2016-05-16 16:12:51.000') as [QUARTER],
+		DATEPART(HOUR, '2016-05-16 16:12:51.000') as [HOUR],
+		DATEPART(month, '2016-05-16 16:12:51.000') as [MONTH],
+		DATEPART(day, '2016-05-16 16:12:51.000') as [DAY],
+		DATEPART(dayofyear, '2016-05-19 16:12:51.000') as [DAY OF YEAR],
+		DATEPART(weekday, '2016-05-19 16:12:51.000') AS [DAY OF WEEK],
+		DATEPART(week, '2016-05-19 16:12:51.000') AS [WEEK];
+		
+		SELECT te.Date FROM tblEvent AS te GROUP BY te.[Date]
+		
+		SELECT DATEPART(weekday,te.[Date]), SUM(te.Value) FROM tblEvent AS te GROUP BY DATEPART(weekday,te.[Date]) 
+		SELECT CAST(te.Date AS DATE), SUM(te.Value) FROM tblEvent AS te
+		WHERE te.da
+		
+		 GROUP BY CAST(te.Date AS DATE)
+		 
