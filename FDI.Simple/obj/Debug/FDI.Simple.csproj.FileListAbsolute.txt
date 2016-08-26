@@ -1,0 +1,63 @@
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Simple\obj\Debug\FDI.Simple.csprojResolveAssemblyReference.cache
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Simple\bin\Debug\FDI.Simple.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Simple\bin\Debug\FDI.Simple.pdb
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Simple\bin\Debug\FDI.Base.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Simple\bin\Debug\EntityFramework.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Simple\bin\Debug\FDI.Base.pdb
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Simple\obj\Debug\FDI.Simple.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Simple\obj\Debug\FDI.Simple.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Simple\bin\Debug\FDI.Simple.dll
+D:\PROJECTS\fdiv4\Code\FDI.Simple\bin\Debug\FDI.Simple.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Simple\bin\Debug\FDI.Base.dll
+D:\PROJECTS\fdiv4\Code\FDI.Simple\bin\Debug\EntityFramework.dll
+D:\PROJECTS\fdiv4\Code\FDI.Simple\bin\Debug\FDI.Base.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Simple\bin\Debug\EntityFramework.xml
+D:\PROJECTS\fdiv4\Code\FDI.Simple\obj\Debug\FDI.Simple.csprojResolveAssemblyReference.cache
+D:\PROJECTS\fdiv4\Code\FDI.Simple\obj\Debug\FDI.Simple.dll
+D:\PROJECTS\fdiv4\Code\FDI.Simple\obj\Debug\FDI.Simple.pdb
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Simple\bin\Debug\EntityFramework.xml
+E:\Test\Website3\FDI.Simple\bin\Debug\FDI.Simple.dll
+E:\Test\Website3\FDI.Simple\bin\Debug\FDI.Simple.pdb
+E:\Test\Website3\FDI.Simple\bin\Debug\FDI.Base.dll
+E:\Test\Website3\FDI.Simple\bin\Debug\EntityFramework.dll
+E:\Test\Website3\FDI.Simple\bin\Debug\FDI.Base.pdb
+E:\Test\Website3\FDI.Simple\bin\Debug\EntityFramework.xml
+E:\Test\Website3\FDI.Simple\obj\Debug\FDI.Simple.csprojResolveAssemblyReference.cache
+E:\Test\Website3\FDI.Simple\obj\Debug\FDI.Simple.dll
+E:\Test\Website3\FDI.Simple\obj\Debug\FDI.Simple.pdb
+E:\Test\Website3\FDI.Web\bin\FDI.Simple.dll
+E:\Test\Website3\FDI.Web\bin\FDI.Simple.pdb
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.Simple.dll
+E:\FDI\PROJECTS\FDI v4\Code\FDI.Web\bin\FDI.Simple.pdb
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Simple.dll
+D:\PROJECTS\fdiv4\Code\FDI.Web\bin\FDI.Simple.pdb
+E:\Test\Website4\Code\FDI.Web\bin\FDI.Simple.dll
+E:\Test\Website4\Code\FDI.Web\bin\FDI.Simple.pdb
+E:\Test\Website4\Code\FDI.Simple\obj\Debug\FDI.Simple.csprojResolveAssemblyReference.cache
+E:\Test\Website4\Code\FDI.Simple\obj\Debug\FDI.Simple.dll
+E:\Test\Website4\Code\FDI.Simple\obj\Debug\FDI.Simple.pdb
+D:\FdiSoft\Project\Code\CTS.Simple\obj\Debug\FDI.Simple.csprojResolveAssemblyReference.cache
+D:\FdiSoft\Project\Code\CTS.Simple\obj\Debug\FDI.Simple.dll
+D:\FdiSoft\Project\Code\CTS.Simple\obj\Debug\FDI.Simple.pdb
+D:\FdiSoft\Project\Code\CTS.Web\bin\FDI.Simple.dll
+D:\FdiSoft\Project\Code\CTS.Web\bin\FDI.Simple.pdb
+D:\FdiSoft\Project\Code\FDI.Simple\obj\Debug\FDI.Simple.csprojResolveAssemblyReference.cache
+D:\FdiSoft\Project\Code\FDI.Simple\obj\Debug\FDI.Simple.dll
+D:\FdiSoft\Project\Code\FDI.Simple\obj\Debug\FDI.Simple.pdb
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.Simple.dll
+D:\FdiSoft\Project\Code\FDI.Web\bin\FDI.Simple.pdb
+D:\FdiSoft\FDI\Code\FDI.Simple\obj\Debug\FDI.Simple.csprojResolveAssemblyReference.cache
+D:\FdiSoft\FDI\Code\FDI.Simple\obj\Debug\FDI.Simple.dll
+D:\FdiSoft\FDI\Code\FDI.Simple\obj\Debug\FDI.Simple.pdb
+D:\FdiSoft\FDI\Code\FDI.Web\bin\FDI.Simple.dll
+D:\FdiSoft\FDI\Code\FDI.Web\bin\FDI.Simple.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.Simple.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Web\bin\FDI.Simple.pdb
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Simple\obj\Debug\FDI.Simple.csprojResolveAssemblyReference.cache
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Simple\obj\Debug\FDI.Simple.dll
+D:\qlsv-khanhnq\FDI\NetPos\trunk\QLSV\FDI.Simple\obj\Debug\FDI.Simple.pdb
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.Simple.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.Simple.pdb
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Simple\obj\Debug\FDI.Simple.csprojResolveAssemblyReference.cache
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Simple\obj\Debug\FDI.Simple.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Simple\obj\Debug\FDI.Simple.pdb

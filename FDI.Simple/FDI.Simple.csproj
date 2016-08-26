@@ -59,6 +59,7 @@
     <Compile Include="CardProcessItem.cs" />
     <Compile Include="CardTypeItem.cs" />
     <Compile Include="CustomerItem.cs" />
+    <Compile Include="Datum.cs" />
     <Compile Include="EventAlarmItem.cs" />
     <Compile Include="EventCodeItem.cs" />
     <Compile Include="FunctionItem.cs" />
