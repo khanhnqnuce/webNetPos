@@ -1,0 +1,5 @@
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.DA.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.Web\bin\FDI.DA.pdb
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.DA\obj\Debug\FDI.DA.csprojResolveAssemblyReference.cache
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.DA\obj\Debug\FDI.DA.dll
+D:\qlsv-khanhnq\FDI\NetPosWeb\trunk\FDI.DA\obj\Debug\FDI.DA.pdb

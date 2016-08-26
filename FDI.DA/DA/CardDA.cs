@@ -155,33 +155,33 @@ namespace FDI.DA
             }
         }
 
-        public List<GiaoDichItem> GiaoDichNapTien(string card, DateTime startDate, DateTime endDate)
-        {
-            try
-            {
-                var query = from c in FDIDB.sp_GiaoDichNapTien(card, startDate, endDate)
-                            orderby c.Date descending
-                            select new GiaoDichItem
-                            {
-                                Event = c.Event,
-                                Date = c.Date ?? new DateTime(),
-                                Value = c.Value ?? 0,
-                                Balance = c.Balance ?? 0,
-                                Object = c.Object,
-                            };
-                return query.ToList();
-            }
-            catch (Exception)
-            {
-                return new List<GiaoDichItem>();
-            }
-        }
+        //public List<GiaoDichItem> GiaoDichNapTien(string card, DateTime startDate, DateTime endDate)
+        //{
+        //    try
+        //    {
+        //        var query = from c in FDIDB.sp_GiaoDichNapTien(card, startDate, endDate)
+        //                    orderby c.Date descending
+        //                    select new GiaoDichItem
+        //                    {
+        //                        Event = c.Event,
+        //                        Date = c.Date ?? new DateTime(),
+        //                        Value = c.Value ?? 0,
+        //                        Balance = c.Balance ?? 0,
+        //                        Object = c.Object,
+        //                    };
+        //        return query.ToList();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return new List<GiaoDichItem>();
+        //    }
+        //}
 
-        public List<GiaoDichItem> GiaoDichTruTien(string card, DateTime startDate, DateTime endDate)
+        public List<GiaoDichItem> LichSuGiaoDich(string card, DateTime startDate, DateTime endDate)
         {
             try
             {
-                var query = from c in FDIDB.sp_GiaoDichTruTien(card, startDate, endDate)
+                var query = from c in FDIDB.sp_LichSuGiaoDich(card, startDate, endDate)
                             orderby c.Date descending
                             select new GiaoDichItem
                             {

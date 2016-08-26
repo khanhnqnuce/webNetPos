@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using FDI.Base;
 using FDI.Simple;
+using FDI.Utils;
 
 namespace FDI.DA
 {
@@ -32,6 +34,36 @@ namespace FDI.DA
                 return null;
             }
 
+        }
+
+        public List<sp_LineChartToObject_Result> GetLineChartToObject(HttpRequestBase httpRequest)
+        {
+            var now = DateTime.Now;
+            var rqfromDate = httpRequest["fromDate"];
+            var rqtoDate = httpRequest["toDate"];
+            var fromdate = !string.IsNullOrEmpty(rqfromDate)
+                ? ConvertUtil.ToDate(rqfromDate)
+                : new DateTime(now.Year, now.Month, 1);
+            var todate = !string.IsNullOrEmpty(rqtoDate)
+                ? ConvertUtil.ToDate(rqtoDate)
+                : now;
+            var query = from c in FDIDB.sp_LineChartToObject(fromdate, todate) select c;
+            return query.ToList();
+        }
+
+        public List<sp_LineChartToArea_Result> GetLineChartToArea(HttpRequestBase httpRequest)
+        {
+            var now = DateTime.Now;
+            var rqfromDate = httpRequest["fromDate"];
+            var rqtoDate = httpRequest["toDate"];
+            var fromdate = !string.IsNullOrEmpty(rqfromDate)
+                ? ConvertUtil.ToDate(rqfromDate)
+                : new DateTime(now.Year, now.Month, 1);
+            var todate = !string.IsNullOrEmpty(rqtoDate)
+                ? ConvertUtil.ToDate(rqtoDate)
+                : now;
+            var query = from c in FDIDB.sp_LineChartToArea(fromdate, todate) select c;
+            return query.ToList();
         }
 
     }
