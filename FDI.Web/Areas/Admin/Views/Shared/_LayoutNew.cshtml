@@ -3,38 +3,19 @@
 <html lang="en" class="app">
 <head>
     <meta charset="utf-8" />
-    <title>HTECH | Web Admin</title>
+    <title>@ViewBag.Title</title>
     <link href="/Images/Icons/icon-cts.png" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
-    @* <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />*@
-    @*<script src="~/Content/Admin/js/jquery-1.9.0.min.js" type="text/javascript"></script>*@
     <script src="/Skin/js/jquery.min.js"></script>
 
-    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Content/Admin/js/jquery.address-1.6.min.js")" type="text/javascript"></script>
-    @*<script src="@Url.Content("~/Content/Admin/js/jquery-ui-1.11.4.custom/jquery-ui.min.js")" type="text/javascript"></script>*@
-    @*<script type="text/javascript" src="/Scripts/dialogextend/build/jquery.dialogextend.js"></script>*@
+    <script src="/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="/Content/Admin/js/jquery.address-1.6.min.js" type="text/javascript"></script>
     <script src="/Content/Admin/js/jquery.mask.js"></script>
-    <script src="@Url.Content("~/Content/Admin/js/jquery.multiselect.js")" type="text/javascript"></script>
-    @* <script src="@Url.Content("~/Content/Admin/js/jquery.treeview.js")" type="text/javascript"></script>*@
-    @*<script src="~/Content/Admin/js/jquery.autocomplete.js"></script>*@
+    <script src="~/Content/Admin/js/jquery.multiselect.js" type="text/javascript"></script>
     <script src="/Content/Admin/js/GridView.js" type="text/javascript"></script>
-    @*<script src="@Url.Content("~/ckeditor/ckeditor.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/ckfinder/ckfinder.js")" type="text/javascript"></script>*@
-    @*<script src="@Url.Content("~/Content/Admin/js/CarMarket.js")" type="text/javascript"></script>*@
-    @*<script src="@Url.Content("~/Content/Admin/js/admin.js")"></script>*@
-    <script src="@Url.Content("~/Content/Admin/js/Load.js")"></script>
-    @*<script src="/Content/Admin/js/purl.js"></script>*@
-
-    @*<link href="/Scripts/AlertsNotify/notify.css" rel="stylesheet" />*@
-    @*<script src="/Content/Admin/jquery-timepicker/jquery.timepicker.min.js"></script>*@
-    @*<link href="/Content/Admin/jquery-timepicker/jquery.timepicker.css" rel="stylesheet" />*@
+    <script src="/Content/Admin/js/Load.js"></script>
     <link href="/Content/Admin/css/jquery.multiSelect.css" rel="stylesheet" type="text/css" />
-    @*<link href="/Content/Admin/css/jquery.treeview.css" rel="stylesheet" type="text/css" />*@
-    @*<link href="/Content/Admin/js/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />*@
     <link href="/Content/Admin/css/gridview.css" rel="stylesheet" type="text/css" />
-    @*<link href="/Content/Admin/css/jquery.autocomplete.css" rel="stylesheet" type="text/css" />*@
-    @*<link href="/Content/Admin/css/styles.css" rel="stylesheet" type="text/css" />*@
 
     <link rel="stylesheet" href="/Skin/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="/Skin/css/animate.css" type="text/css" />
@@ -154,6 +135,7 @@
         </section>
         <!-- Bootstrap -->
         <script src="/Skin/js/bootstrap.js"></script>
+        <script src="~/Scripts/Highcharts/highcharts.js"></script>
         <!-- App -->
         <script src="/Skin/js/app.js"></script>
         <script src="/Skin/js/app.plugin.js"></script>

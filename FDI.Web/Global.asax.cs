@@ -23,50 +23,50 @@ namespace FDI.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
 
-            Application["count_visit"] = 0;
-            Application["online"] = 0;
+            //Application["count_visit"] = 0;
+            //Application["online"] = 0;
 
         }
 
         void Session_Start(object sender, EventArgs e)
         {
-            var countVisit = 0;
-            Application["online"] = (int)Application["online"] + 1;
+            //var countVisit = 0;
+            //Application["online"] = (int)Application["online"] + 1;
 
-            //Kiểm tra file count_visit.txt nếu không tồn  tại thì
-            if (System.IO.File.Exists(Server.MapPath("~/count.txt")) == false)
-            {
-                countVisit = 1;
-            }
-            // Ngược lại thì
-            else
-            {
-                // Đọc dử liều từ file count_visit.txt
-                var read = new System.IO.StreamReader(Server.MapPath("~/count.txt"));
-                countVisit = int.Parse(read.ReadLine());
-                read.Close();
-                // Tăng biến count_visit thêm 1
-                countVisit++;
-            }
-            // khóa website
-            Application.Lock();
+            ////Kiểm tra file count_visit.txt nếu không tồn  tại thì
+            //if (System.IO.File.Exists(Server.MapPath("~/count.txt")) == false)
+            //{
+            //    countVisit = 1;
+            //}
+            //// Ngược lại thì
+            //else
+            //{
+            //    // Đọc dử liều từ file count_visit.txt
+            //    var read = new System.IO.StreamReader(Server.MapPath("~/count.txt"));
+            //    countVisit = int.Parse(read.ReadLine());
+            //    read.Close();
+            //    // Tăng biến count_visit thêm 1
+            //    countVisit++;
+            //}
+            //// khóa website
+            //Application.Lock();
 
-            // gán biến Application count_visit
-            Application["count_visit"] = countVisit;
+            //// gán biến Application count_visit
+            //Application["count_visit"] = countVisit;
 
-            // Mở khóa website
-            Application.UnLock();
+            //// Mở khóa website
+            //Application.UnLock();
 
-            // Lưu dử liệu vào file  count_visit.txt
-            var writer = new System.IO.StreamWriter(Server.MapPath("~/count.txt"));
-            writer.WriteLine(countVisit);
-            writer.Close();
+            //// Lưu dử liệu vào file  count_visit.txt
+            //var writer = new System.IO.StreamWriter(Server.MapPath("~/count.txt"));
+            //writer.WriteLine(countVisit);
+            //writer.Close();
 
         }
 
         void Session_End(object sender, EventArgs e)
         {
-            Application["online"] = (int)Application["online"] - 1;
+            //Application["online"] = (int)Application["online"] - 1;
         }
 
 

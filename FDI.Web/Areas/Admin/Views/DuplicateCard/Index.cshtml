@@ -1,9 +1,10 @@
 ﻿@{
-    ViewBag.Title = "Quản lý khách hàng";
+    ViewBag.Title = "Danh sách thẻ trùng nhau";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutNew.cshtml";
 }
 <script type="text/javascript">
     urlLists = '@Url.Action("ListItems", "DuplicateCard")';
+    urlXuatExcel = '@Url.Action("ExportExcell","DuplicateCard")';
     formWidth = 960;
     formHeight = $(window).height() - 24;
     viewWidth = 960;
@@ -11,12 +12,11 @@
 
     $(document).ready(function () {
         initAjaxLoad(urlLists, "#Griditems");
-
-        $("#gridSearch").submit(function () {
-            var form = $("#gridSearch");
-            window.location.href = '#' + getValueFormMutilSelect(form);
+        $("#btn_XuatExcel").click(function () {
+            window.location.href = urlXuatExcel;
             return false;
         });
+
     });
 </script>
 <section id="content">
@@ -26,7 +26,16 @@
                 <header class="header bg-white b-b clearfix">
                     <div class="row m-t-sm">
                         <div class="col-sm-10 m-b-xs">
-                            <h4>DANH SÁCH THẺ TRÙNG NHAU</h4>
+                            <label style="font-weight: bold">DANH SÁCH THẺ TRÙNG NHAU</label>
+                        </div>
+                        <div class="col-sm-2 m-b-xs">
+                            
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-sm btn-default" title="Filter" data-toggle="dropdown"><span class="caret"></span></button>
+                                <ul class="dropdown-menu" style="left: -129px;">
+                                    <li><a class="btn" id="btn_XuatExcel"><i class="fa fa-check icon-muted fa-fw"></i>Excel</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </header>

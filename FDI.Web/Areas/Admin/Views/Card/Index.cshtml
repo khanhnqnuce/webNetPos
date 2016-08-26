@@ -1,9 +1,10 @@
 ﻿@{
-    ViewBag.Title = "Quản lý khách hàng";
+    ViewBag.Title = "Danh sách thẻ";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutNew.cshtml";
 }
 <script type="text/javascript">
     urlLists = '@Url.Action("ListItems", "Card")';
+    urlXuatExcel = '@Url.Action("ExportExcell","Card")';
     formWidth = 960;
     formHeight = $(window).height() - 24;
     viewWidth = 960;
@@ -38,6 +39,11 @@
         });
 
         $("select.mutil").multiSelect({ oneOrMoreSelected: '*', selectAllText: '<b>Tất cả</b>', optGroupSelectable: true });
+
+        $("#btn_XuatExcel").click(function () {
+            window.location.href = urlXuatExcel;
+            return false;
+        });
     });
 </script>
 <section id="content">
@@ -98,7 +104,7 @@
                                 <div class="btn-group pull-right">
                                     <button type="button" class="btn btn-sm btn-default" title="Filter" data-toggle="dropdown"><span class="caret"></span></button>
                                     <ul class="dropdown-menu" style="left: -129px;">
-                                        <li><a class="btn"><i class="fa fa-check icon-muted fa-fw"></i> Excel</a></li>
+                                        <li><a class="btn" id="btn_XuatExcel"><i class="fa fa-check icon-muted fa-fw"></i> Excel</a></li>
                                         @*<li class="divider"></li>
                                         <li><a href="#hideAll" data-event="hideAll" data-grid="#mygird"><i class="fa fa-times icon-muted fa-fw"></i>Ẩn</a></li>
                                         <li class="divider"></li>

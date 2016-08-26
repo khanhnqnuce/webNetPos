@@ -42,17 +42,9 @@ namespace FDI.Web.Controllers
             {
                 return Json("<tr><td colspan='5' style='color:red'>Mã thẻ không đúng</td></tr>");
             }
-            var typecard = Request["typecard"];
             var fromdate = Request["fromDate"];
             var todate = Request["toDate"];
-            if (typecard == "1")
-            {
-                model = _da.GiaoDichTruTien(card, ConvertUtil.ToDate(fromdate), ConvertUtil.ToDate(todate).AddDays(1));
-            }
-            if (typecard == "2")
-            {
-                model = _da.GiaoDichNapTien(card, ConvertUtil.ToDate(fromdate), ConvertUtil.ToDate(todate).AddDays(1));
-            }
+            model = _da.LichSuGiaoDich(card, ConvertUtil.ToDate(fromdate), ConvertUtil.ToDate(todate).AddDays(1));
             return PartialView(model);
         }
 

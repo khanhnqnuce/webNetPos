@@ -1,10 +1,11 @@
 ﻿@model FDI.Simple.ModelBuidingItem
 @{
-    ViewBag.Title = "Quản lý thẻ";
+    ViewBag.Title = "Thống kê thẻ";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutNew.cshtml";
 }
 <script type="text/javascript">
     urlLists = '@Url.Action("ListItems", "StatisticsCard")';
+    urlXuatExcel = '@Url.Action("ExportExcell", "StatisticsCard")';
     formWidth = 960;
     formHeight = $(window).height() - 24;
     viewWidth = 960;
@@ -42,6 +43,10 @@
                     $("#ObjectCode").append("<option value='" + val.Code + "'>" + val.Name + "</option>");
                 });
             });
+        });
+        $("#btn_XuatExcel").click(function () {
+            window.location.href = urlXuatExcel;
+            return false;
         });
     });
 </script>
@@ -90,6 +95,12 @@
                                     </select>
                                 </div>
                                 <button name="submit.Search" type="submit" class="btn btn-sm btn-primary">Tìm kiếm</button>
+                                <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-sm btn-default" title="Filter" data-toggle="dropdown"><span class="caret"></span></button>
+                                <ul class="dropdown-menu" style="left: -129px;">
+                                    <li><a class="btn" id="btn_XuatExcel"><i class="fa fa-check icon-muted fa-fw"></i>Excel</a></li>
+                                </ul>
+                            </div>
                             </form>
                         </div>
                     </div>

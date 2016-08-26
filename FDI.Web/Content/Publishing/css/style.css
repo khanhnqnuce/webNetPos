@@ -2,9 +2,17 @@
 /*Popup Tabs Login  Register*/
 
 #header-main { background: #0e76bc;}
-.content-left { width: 100%;float: left;}
+.content-left { width: 100%;/*float: left;*/}
 .content-left h2 { background:url(../img/ico-user.png) no-repeat left top #0F75BC;padding: 10px 10px;color: #fff;font-size: 16px;margin-top: 25px;margin-bottom: 0;float: left;width: 100%; padding-left: 44px}
 .content-left h3 {background: #e6f5ff;padding: 10px 10px;color: #0e76bc;font-size: 16px;margin-top: 0;margin-bottom: 0;float: left;width: 100%;font-weight: normal;border: 1px solid #acd0e8;}
+.menu-aside { width: 100%;/*float: left;*/}
+.box-menu-left { width: 100%;padding-top: 233px;background: #ffffff;}
+.box-menu-left ul { border: 1px solid #e1e1e1;border-top: 0;}
+.box-menu-left li { display: block; border-bottom: 1px dashed #e5e5e5;    padding: 10px 0 5px 35px;}
+.box-menu-left li:last-child { border-bottom: none;}
+.box-menu-left li a {color: #707070;font-weight: normal;}
+.box-menu-left li a:hover {color: #0e76bc;}
+
 .box-content-left { border-left: 1px solid #dcdcdc;float: left;width: 100%;border-right: 1px solid #dcdcdc;border-bottom: 1px solid #dcdcdc;padding: 8px;margin-bottom: 15px;}
 .profile-account { width: 100%;float: left; }
 .account-avartar { width: 100%;float: left;width: 100px;height: 100px;border: 1px solid #dcdcdc;padding: 5px;text-align: center;line-height: 90px;text-align: center;}
@@ -13,13 +21,6 @@
 .account-detail a { display: block;font-weight: normal;text-transform: uppercase;}
 .account-detail a:hover {text-decoration: underline}
 .account-detail span { display: block;font-weight: normal;padding-top: 2px;}
-.box-menu-left { width: 100%;float: left;background: #ffffff;}
-.box-menu-left ul { border: 1px solid #e1e1e1;border-top: 0;/* padding-left: 21px; */}
-.box-menu-left li { display: block; border-bottom: 1px dashed #e5e5e5;padding-left: 20px;}
-.box-menu-left li:last-child { border-bottom: none;}
-.box-menu-left li a { display: block;padding: 8px 10px;color: #707070;font-weight: normal;}
-.box-menu-left li a:hover {color: #0e76bc;}
-.menu-aside { width: 100%;float: left;}
 .content-right { width: 100%;float: left;margin-top: 25px;}
 /*Link call Log Res mobie*/
 

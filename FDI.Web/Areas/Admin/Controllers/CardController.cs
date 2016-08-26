@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Web.Mvc;
 using FDI.DA;
 using FDI.Simple;
 using FDI.Utils;
+using FDI.Web.Common;
 
 namespace FDI.Areas.Admin.Controllers
 {
@@ -11,6 +13,8 @@ namespace FDI.Areas.Admin.Controllers
     {
         readonly CardDA _da = new CardDA();
         readonly RecordDA _recordDa = new RecordDA();
+        private static List<CardItem> _model;
+
         public ActionResult Index()
         {
             if (!User.Identity.IsAuthenticated) return Redirect("/Admin/User/Login");
@@ -25,7 +29,6 @@ namespace FDI.Areas.Admin.Controllers
 
         public ActionResult ListItems()
         {
-            List<CardItem> model;
 
             var fillter = Request["fillter"] ?? "false";
             if (fillter == "true")
@@ -48,13 +51,14 @@ namespace FDI.Areas.Admin.Controllers
                 const string cardType = "";
                 var status = Request["status"] ?? "";
 
-                model = _da.FindCardItems(buiding, area, obj, cardType, cardNumber, code, name, status);
+                _model = _da.FindCardItems(buiding, area, obj, cardType, cardNumber, code, name, status);
             }
             else
             {
-                model = _da.GetAll();
+                _model = _da.GetAll();
             }
-            return View(model);
+
+            return View(_model);
         }
 
         public ActionResult AjaxView(int id, string cardNumber)
@@ -89,10 +93,18 @@ namespace FDI.Areas.Admin.Controllers
             return txt;
         }
 
-        public ActionResult Excel()
+        public ActionResult ExportExcell()
         {
-            return null;
+            var fileName = string.Format("danh-sach-the_{0}.xlsx", DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss"));
+            var filePath = Path.Combine(Request.PhysicalApplicationPath, "File\\ExportImport", fileName);
+            var folder = Request.PhysicalApplicationPath + "File\\ExportImport";
+            if (!Directory.Exists(folder))
+            {
+                Directory.CreateDirectory(folder);
+            }
+            Excel.ExportToCard(filePath,_model);
+            var bytes = System.IO.File.ReadAllBytes(filePath);
+            return File(bytes, "text/xls", fileName);
         }
-
     }
 }

@@ -10,30 +10,11 @@
             format: 'dd/mm/yyyy'
         }).mask('00/00/0000');
 
-        $("#shopping-cart").click(function () {
-            $(".title").html("Chi tiết giao dịch trừ tiền");
-            $("#typecard").val("1");
-            $.post("/Home/ListDetail", $("#form-search").serialize(), function (data) {
-                $(".gridView tbody").html(data);
-            });
-        });
-
-        $("#money").click(function () {
-            $(".title").html("Chi tiết giao dịch nạp tiền");
-            $("#typecard").val("2");
-            $.post("/Home/ListDetail", $("#form-search").serialize(), function (data) {
-                $(".gridView tbody").html(data);
-            });
-        });
 
         $("#btn-search").click(function () {
-            var type = $("#typecard").val();
-            if (type == 1) {
-                $("#shopping-cart").click();
-            }
-            if (type == 2) {
-                $("#money").click();
-            }
+            $.post("/Home/ListDetail", $("#form-search").serialize(), function (data) {
+                $(".gridView tbody").html(data);
+            });
         });
 
         $(".lstcardnumber").click(function () {
@@ -61,6 +42,7 @@
                                             <li><a href="/Login/ProcessLogout"><span class="fa fa-sign-out"></span>Thoát</a></li>
                                         </ul>
                                     </li>
+                                    @*<li><a href="#" title="">Thoát</a></li>*@
                                 </ul>
                             </div>
                         </div>
@@ -74,7 +56,7 @@
                         <div class="col-md-3">
                             @Html.Action("Infomation", "Home")
                         </div>
-                        <div class="col-md-9 no-pd-l">
+                        <div class="col-md-9">
                             <div class="content-right">
                                 <div class="box-content">
                                     <div class="row">
@@ -82,17 +64,16 @@
                                             <div class="col-lg-3">
                                                 <div class="form-group">
                                                     <input type="text" name="cardNumber" id="cardNumber" class="form-control" placeholder="Nhập mã thẻ">
-                                                    <input type="hidden" id="typecard" name="typecard" value="1">
                                                 </div>
                                             </div>
                                             <div class="col-lg-2">
                                                 <div class="form-group">
-                                                    <input type="text" name="fromDate" class="fieldSearchDate form-control" placeholder="Từ ngày" value="@DateTime.Now"/>
+                                                    <input type="text" name="fromDate" class="fieldSearchDate form-control" placeholder="Từ ngày" value="@DateTime.Now.ToString("dd/MM/yyyy")"/>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2">
                                                 <div class="form-group">
-                                                    <input type="text" name="toDate" class="fieldSearchDate form-control" placeholder="Tới ngày" value="@DateTime.Now"/>
+                                                    <input type="text" name="toDate" class="fieldSearchDate form-control" placeholder="Tới ngày" value="@DateTime.Now.ToString("dd/MM/yyyy")"/>
                                                 </div>
                                             </div>
                                             <div class="col-lg-1">
@@ -102,7 +83,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <b style="margin-bottom: 15px;" class="title">Chi tiết giao dịch trừ tiền</b>
+                                    <b style="margin-bottom: 15px;" class="title">Lịch sử giao dịch thẻ</b>
                                 </div>
                             </div>
                             <table class="gridView table table-bordered">
@@ -110,8 +91,8 @@
                                     <tr>
                                         <th class="text-center" style="width: 5%">STT</th>
                                         <th class="text-center">Thời gian</th>
-                                        <th class="text-center">Tên giao dịch</th>
-                                        <th class="text-center">Số tiền</th>
+                                        <th class="text-center">Mua Hàng</th>
+                                        <th class="text-center">Nạp thẻ</th>
                                         <th class="text-center">Số dư</th>
                                     </tr>
                                 </thead>

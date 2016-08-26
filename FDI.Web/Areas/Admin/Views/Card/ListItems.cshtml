@@ -1,7 +1,49 @@
 ﻿@model IEnumerable<FDI.Simple.CardItem>
+<script>
+    //$(function () {
+    //    registerGridView('#mygird');
+
+    //    var optionsShop = {
+    //        chart: {
+    //            renderTo: 'containerShop',
+    //            type: 'pie'
+    //        },
+    //        title: {
+    //            text: ''
+    //        },
+    //        plotOptions: {
+    //            series: {
+    //                dataLabels: {
+    //                    enabled: true,
+    //                    format: '{point.name}: {point.y:1f} đ'
+    //                }
+    //            }
+    //        },
+    //        tooltip: {
+    //            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+    //            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:1f} đ</b><br/>'
+    //        },
+    //        series: [{
+    //            name: 'Cửa hàng',
+    //            colorByPoint: true,
+    //            data:
+    //            [
+    //                { "name": "Tổng Kho", "y": 6210000.000000, "drilldown": "Tổng Kho" },
+    //                { "name": "76 Phạm Ngọc Thạch - HN", "y": 61656500.000000, "drilldown": "76 Phạm Ngọc Thạch - HN" },
+    //                { "name": "181 Lạch Tray - HP", "y": 63036500.000000, "drilldown": "181 Lạch Tray - HP" },
+    //                { "name": "29 Nguyễn Văn Cừ - TP Vinh", "y": 60407000.000000, "drilldown": "29 Nguyễn Văn Cừ - TP Vinh" },
+    //                { "name": "adayroi.com", "y": 37135000.000000, "drilldown": "adayroi.com" },
+    //                { "name": "Kho thành phẩm", "y": 24910000.000000, "drilldown": "Kho thành phẩm" }]
+                
+    //        }],
+    //    };
+    //    var chart1 = new Highcharts.Chart(optionsShop);
+    //})
+</script>
 <section id="mygird" class="vbox">
     <section class="scrollable wrapper w-f">
         <section class="panel panel-default">
+            <div id="containerShop" style="/*width: 1000px; height: 400px; margin: 0 auto*/"></div>
             <table class="gridView">
                 <thead>
                     <tr>

@@ -1,6 +1,9 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.IO;
+using System.Web.Mvc;
 using FDI.DA;
 using FDI.Simple;
+using FDI.Web.Common;
 
 namespace FDI.Areas.Admin.Controllers
 {
@@ -9,6 +12,7 @@ namespace FDI.Areas.Admin.Controllers
         readonly ThongKeTheDA _da = new ThongKeTheDA();
         readonly CardDA _cardDa = new CardDA();
         readonly RecordDA _recordDa = new RecordDA();
+        private static ModelCardItem _model;
         public ActionResult Index()
         {
             if (!User.Identity.IsAuthenticated) return Redirect("/Admin/User/Login");
@@ -23,12 +27,12 @@ namespace FDI.Areas.Admin.Controllers
 
         public ActionResult ListItems()
         {
-            var model = new ModelCardItem
+            _model = new ModelCardItem
             {
                 LsThongKeTheItems = _da.GetThongKeTheItems(Request),
                 LstCardItems = _cardDa.ReportDetailCard(Request)
-            }; 
-            return View(model);
+            };
+            return View(_model);
         }
 
         [HttpPost]
@@ -42,6 +46,20 @@ namespace FDI.Areas.Admin.Controllers
         {
             var list = _cardDa.GetObject(code);
             return Json(new { list }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult ExportExcell()
+        {
+            var fileName = string.Format("thong-ke-the_{0}.xlsx", DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss"));
+            var filePath = Path.Combine(Request.PhysicalApplicationPath, "File\\ExportImport", fileName);
+            var folder = Request.PhysicalApplicationPath + "File\\ExportImport";
+            if (!Directory.Exists(folder))
+            {
+                Directory.CreateDirectory(folder);
+            }
+            Excel.ExportToTalCard(filePath, _model);
+            var bytes = System.IO.File.ReadAllBytes(filePath);
+            return File(bytes, "text/xls", fileName);
         }
     }
 }

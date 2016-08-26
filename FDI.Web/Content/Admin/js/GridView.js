@@ -1,6 +1,7 @@
 ﻿var imageLoading = "<div class='col-sm-12 text-left m-t-sm' style='position: absolute;'><img src='/images/loading52.gif'/></div>";
 var urlLists = '';
 var urlForm = '';
+var urlXuatExcel = '';
 
 
 function run_waitMe(effect, obj, text) {
