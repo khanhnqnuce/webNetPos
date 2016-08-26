@@ -401,7 +401,6 @@ namespace FDI.Utils
             }
         }
 
-
         public static string CreateRandomKey()
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -432,7 +431,6 @@ namespace FDI.Utils
             var key = stringdate + name + finalString;
             return key;
         }
-
 
         /// <summary>
         /// Xóa thẻ HTML

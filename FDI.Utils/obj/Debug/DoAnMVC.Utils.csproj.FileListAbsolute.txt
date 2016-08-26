@@ -1,0 +1,30 @@
+D:\DU AN\Dacap\BuildProcessTemplates\Code.Web\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.csprojResolveAssemblyReference.cache
+D:\DU AN\Dacap\BuildProcessTemplates\Code.Web\DoAnMVC.Utils\bin\Debug\DoAnMVC.Utils.dll
+D:\DU AN\Dacap\BuildProcessTemplates\Code.Web\DoAnMVC.Utils\bin\Debug\DoAnMVC.Utils.pdb
+D:\DU AN\Dacap\BuildProcessTemplates\Code.Web\DoAnMVC.Utils\bin\Debug\log4net.dll
+D:\DU AN\Dacap\BuildProcessTemplates\Code.Web\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.dll
+D:\DU AN\Dacap\BuildProcessTemplates\Code.Web\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.pdb
+D:\DU AN\Dacap\Dacap\DoAnMVC.Utils\bin\Debug\DoAnMVC.Utils.dll
+D:\DU AN\Dacap\Dacap\DoAnMVC.Utils\bin\Debug\DoAnMVC.Utils.pdb
+D:\DU AN\Dacap\Dacap\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.csprojResolveAssemblyReference.cache
+D:\DU AN\Dacap\Dacap\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.dll
+D:\DU AN\Dacap\Dacap\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.pdb
+D:\DU AN\Dacap\Dacap_TLGroup\DoAnMVC.Utils\bin\Debug\DoAnMVC.Utils.dll
+D:\DU AN\Dacap\Dacap_TLGroup\DoAnMVC.Utils\bin\Debug\DoAnMVC.Utils.pdb
+D:\DU AN\Dacap\Dacap_TLGroup\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.dll
+D:\DU AN\Dacap\Dacap_TLGroup\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.pdb
+D:\DU AN\Dacap\Dacap_TLGroup\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.csprojResolveAssemblyReference.cache
+E:\Dacap_TLGroup\DoAnMVC.Utils\bin\Debug\DoAnMVC.Utils.dll
+E:\Dacap_TLGroup\DoAnMVC.Utils\bin\Debug\DoAnMVC.Utils.pdb
+E:\Dacap_TLGroup\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.dll
+E:\Dacap_TLGroup\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.pdb
+E:\Dacap_TLGroup\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.csprojResolveAssemblyReference.cache
+E:\FDICODE\NamPhaoHoa\Code\DoAnMVC.Utils\bin\Debug\DoAnMVC.Utils.dll
+E:\FDICODE\NamPhaoHoa\Code\DoAnMVC.Utils\bin\Debug\DoAnMVC.Utils.pdb
+E:\FDICODE\NamPhaoHoa\Code\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.dll
+E:\FDICODE\NamPhaoHoa\Code\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.pdb
+D:\FdiSoft\namphaohoa\Code\DoAnMVC.Utils\bin\Debug\DoAnMVC.Utils.dll
+D:\FdiSoft\namphaohoa\Code\DoAnMVC.Utils\bin\Debug\DoAnMVC.Utils.pdb
+D:\FdiSoft\namphaohoa\Code\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.dll
+D:\FdiSoft\namphaohoa\Code\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.pdb
+D:\FdiSoft\namphaohoa\Code\DoAnMVC.Utils\obj\Debug\DoAnMVC.Utils.csprojResolveAssemblyReference.cache

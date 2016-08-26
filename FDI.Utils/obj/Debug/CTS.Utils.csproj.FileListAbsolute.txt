@@ -1,0 +1,5 @@
+D:\FdiSoft\Project\Code\DoAnMVC.Utils\bin\Debug\FDI.Utils.dll
+D:\FdiSoft\Project\Code\DoAnMVC.Utils\bin\Debug\FDI.Utils.pdb
+D:\FdiSoft\Project\Code\DoAnMVC.Utils\obj\Debug\FDI.Utils.dll
+D:\FdiSoft\Project\Code\DoAnMVC.Utils\obj\Debug\FDI.Utils.pdb
+D:\FdiSoft\Project\Code\DoAnMVC.Utils\obj\Debug\CTS.Utils.csprojResolveAssemblyReference.cache
